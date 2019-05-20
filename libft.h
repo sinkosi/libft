@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/20 13:29:35 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/20 16:37:28 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,5 +89,15 @@ char *ft_strcpy(char *dst, const char *src);
  * If src is less than len char long, the remainder of dst is filled with 
  * '\0' characters. Otherwise dst is not determined.*/
 char *ft_strncpy(char *dst, const char *src);
+
+/*FT_STRCMP - This function compares characters in a string lexicographically
+ * The function returns 0 if the strings are equal, and non-zero if they are
+ * not equal.*/
+int ft_strcmp(const char *s1, const char *s2);
+
+/*FTSTRNCMP - This function compares characters in a string up to n charac-
+ * ters. The function returns 0 if the strings are equalm and non-zero if
+ * they are not equal.*/
+int ft_strncmp(const char *s1, const char *s2, size_t n);
 
 #endif
