@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:22 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/17 11:34:24 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/20 12:59:07 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ size_t ft_strlen(const char *c)
 	while(c != '\0')
 		num++;
 
-	return num;
+	return (num);
 }

@@ -6,8 +6,22 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:08 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/17 11:34:11 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/20 13:04:53 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+char *ft_strcpy(char *dst, const *src)
+{
+	int i;
+	
+	i = 0;
+	while (src[i])
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (dst);
+}

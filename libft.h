@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/17 11:35:00 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/20 13:29:35 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,5 +79,15 @@ int ft_toupper(int c);
  * The function will return the lowercase letter if it is successful, or the
  * original input if it fails.*/
 int ft_tolower(int c);
+
+/*FT_STRCPY - This function copies the source string and applies it to a 
+ * destination string, including the '\0' terminator char.
+ */
+char *ft_strcpy(char *dst, const char *src);
+
+/*FT_STRNCPY - This function copies at most len characters from src to dst.
+ * If src is less than len char long, the remainder of dst is filled with 
+ * '\0' characters. Otherwise dst is not determined.*/
+char *ft_strncpy(char *dst, const char *src);
 
 #endif
