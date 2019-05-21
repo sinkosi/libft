@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 16:11:22 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/21 10:32:17 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/21 16:13:01 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ int	ft_strcmp(const char *s1, const char *s2)
 			control = s1[i] - s2[i];
 			i++;
 		}
-		return (control);
 	}
+	return (control);
 }
