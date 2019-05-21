@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:30:55 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/21 10:52:35 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/21 14:21:59 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,6 @@ int	ft_isalnum(int c)
 {
 	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
+	else
+		return (0);
 }

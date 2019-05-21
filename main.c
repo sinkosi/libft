@@ -6,24 +6,18 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:12:08 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/21 11:15:34 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/21 14:11:45 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-**void ft_putchar(char c)
-**{
-**	write(1, &c, 1);
-**}
-*/
 int	main(void)
 {
-	char a;
+	char *a;
 	
-	a = 'a';
-	ft_putchar(a);
+	a = "I am a coding butthole";
+	ft_putstr(a);
 	ft_putchar('\n');
 	return (0);
 }

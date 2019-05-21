@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/20 16:37:28 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/21 14:07:33 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
+#include <string.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 /*FT_STRLEN - This function returns the length of the string input */
 size_t ft_strlen(const char *c);
@@ -95,9 +99,19 @@ char *ft_strncpy(char *dst, const char *src);
  * not equal.*/
 int ft_strcmp(const char *s1, const char *s2);
 
-/*FTSTRNCMP - This function compares characters in a string up to n charac-
+/*FT_STRNCMP - This function compares characters in a string up to n charac-
  * ters. The function returns 0 if the strings are equalm and non-zero if
  * they are not equal.*/
 int ft_strncmp(const char *s1, const char *s2, size_t n);
+
+/*FT_PUTCHAR - This function will put a character to the standard output.
+ * It is limited to one char and utilises the write function.
+ */
+void	ft_putchar(char c);
+
+/*FT_PUTSTR - This function will print a string to the standard output.
+ * It is limited by the '\0' terminator to show the end of the char string.
+ */
+void	ft_putstr(const char *str);
 
 #endif
