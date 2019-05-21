@@ -6,17 +6,14 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:33:31 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/17 11:33:44 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/21 11:09:11 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*This is the file for FT_ISUPPER*/
-
 #include "libft.h"
-#include <stdlib.h>
 
-int ft_isupper(int c)
+int	ft_isupper(int c)
 {       
-        if (c >= 65 && c <= 90)
-                return (1);
+	if (c >= 65 && c <= 90)
+		return (1);
 }

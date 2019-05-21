@@ -6,16 +6,13 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:32:51 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/17 11:32:52 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/21 11:08:19 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*This is the file for FT_ISSPACE*/
-
 #include "libft.h"
-#include <stdlib.h>
 
-int ft_isspace(int c)
+int	ft_isspace(int c)
 {
 	if ((c == 32) || (c >= 9 && c <= 13))
 		return (1);

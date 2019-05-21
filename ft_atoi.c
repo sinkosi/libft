@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:30:33 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/17 11:30:47 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/21 10:10:32 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int ft_atoi(const char *nptr)
 	/*The following part is a while loop to removed tabs and whitespaces*/
 	while(nptr[i] >= '\t' && nptr[i] <= '\r' || nptr[i] == ' ')
 		i++;
-	
+
 	/*This is where we deal with the leading sign to determine the leading interger value*/
 	while(nptr[i] == '-' || nptr[i] == '+')
 	{

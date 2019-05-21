@@ -6,16 +6,13 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:32:42 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/17 11:32:44 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/21 11:03:45 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*This is the file for FT_ISPRINT*/
-
 #include "libft.h"
-#include <stdlib.h>
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (((c >= 32) && (c < 127)) || (c >= 9 && c <= 13))
 		return (1);

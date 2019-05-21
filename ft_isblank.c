@@ -6,16 +6,13 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:31:48 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/17 11:31:50 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/21 10:55:52 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*This is the file for FT_ISBLANK*/
-
 #include "libft.h"
-#include <stdlib.h>
 
-int ft_isblank(int c)
+int	ft_isblank(int c)
 {
 	if ((c == 32) || (c == 9))
 		return (1);

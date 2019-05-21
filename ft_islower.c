@@ -6,16 +6,13 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:32:31 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/17 11:32:34 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/21 11:02:48 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*This is the file for FT_ISLOWER*/
-
 #include "libft.h"
-#include <stdlib.h>
 
-int ft_islower(int c)
+int	ft_islower(int c)
 {
 	if (c >= 97 && c <= 122)
 		return (1);

@@ -6,17 +6,14 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:33:55 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/17 11:33:56 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/21 11:11:36 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*This is the file for FT_ISXDIGIT*/
-
 #include "libft.h"
-#include <stdlib.h>
 
-int ft_isxdigit(int c)
-{       
-        if ((c >= 48 && c <= 57) || (c >= 97 && c <= 102) || (c >= 65 && c <= 70))
-                return (1);
+int	ft_isxdigit(int c)
+{
+	if ((c >= 48 && c <= 57) || (c >= 97 && c <= 102) || (c >= 65 && c <= 70))
+		return (1);
 }

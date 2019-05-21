@@ -6,16 +6,13 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:32:12 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/17 11:32:14 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/21 10:57:49 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*This is the file for FT_ISGRAPH*/
-
 #include "libft.h"
-#include <stdlib.h>
 
-int ft_isgraph(int c)
+int	ft_isgraph(int c)
 {
 	if ((c > 32) && (c < 127))
 		return (1);

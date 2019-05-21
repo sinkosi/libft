@@ -6,18 +6,18 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:22 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/20 12:59:07 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/21 10:25:27 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
-size_t ft_strlen(const char *c)
+size_t	ft_strlen(const char *c)
 {
-	size_t num = 0;
-	while(c != '\0')
-		num++;
+	size_t num;
 
+	num = 0;
+	while (c != '\0')
+		num++;
 	return (num);
 }

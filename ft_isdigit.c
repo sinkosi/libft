@@ -6,17 +6,14 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:31:59 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/17 11:32:03 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/21 10:21:04 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*This is the file for FT_ISDIGIT*/
-
 #include "libft.h"
-#include <stdlib.h>
 
-int ft_isdigit(int c)
-{       
-        if (c >= 48 && c <= 57)
-                return (1);
+int	ft_isdigit(int c)
+{
+	if (c >= 48 && c <= 57)
+		return (1);
 }
