@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/21 16:03:51 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/22 08:34:41 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # define LIBFT_H
 #include <string.h>
 #include <unistd.h>
-#include <stdio.h>
 #include <stdlib.h>
 
 /*FT_STRLEN - This function returns the length of the string input */

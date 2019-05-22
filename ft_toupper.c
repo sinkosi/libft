@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:48 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/21 10:38:37 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/22 12:51:48 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_toupper(int c)
 {
 	if (ft_islower(c))
-		return (c - 22);
+		return (c - 32);
 	else
 		return (c);
 }
