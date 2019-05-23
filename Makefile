@@ -1,4 +1,4 @@
-NAME	= libft.a test.a
+NAME	= libft.a
 
 SRC		=	*.c
 
@@ -8,7 +8,7 @@ CCFLAG	= -Wall -Wextra -Werror
 
 $(NAME)	: $(OBJ)
 		$(CC) $(CCFLAG) $(SRC)
-		ar rc $(NAME) $(OBJ) libft.h test.h
+		ar rc $(NAME) $(OBJ) libft.h 
 		ranlib $(NAME)
 
 all		: $(NAME)

@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:12:08 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/23 08:15:31 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/23 09:00:40 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ int	main(void)
 	test_02(c);
 	ft_putstr(output);
 	char *str1 = ("This is an arbitrary string and we will get its ft_strlen");	
-	
+	ft_putstr(str1);	
 	return (0);
 }
