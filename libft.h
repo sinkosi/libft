@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/24 11:22:14 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/24 11:41:25 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,6 +128,14 @@ char	*ft_strncat(char *dst, const char *src, size_t n);
  * NUL should be included in dstsize.*/
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
+/*FT_STRCHR - This function locates the first occurence of c in the string
+ * pointed to by s. The function returns a pointer to the located charac-
+ * ter. It can also find the '\0' character.*/
+char	*ft_strchr(const char *s, int c);
 
+/*FT_STRRCHR - This function locates the last occurence of c in the string
+ * pointed to by s. The function returns a pointer to the located charac-
+ * ter. It can also fins the '\0' character.*/
+char	*ft_strrchr(const char *s, int c);
 
 #endif
