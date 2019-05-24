@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/22 08:34:41 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/24 11:22:14 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,5 +112,22 @@ void	ft_putchar(char c);
  * It is limited by the '\0' terminator to show the end of the char string.
  */
 void	ft_putstr(const char *str);
+
+/*FT_STRCAT - This function will append a copy of a null terminated string
+ * s2 to the end of the null terminated string s1. Then it will add a null
+ * terminator string '\0'.*/
+char	*ft_strncat(char *dst, const char *src);
+
+/*FT_STRNCAT - This function wiil append not more that n characters from
+ * string s2 to the end of string s1 and then add the termiantor character
+ * '\0'. It will return the pointer s1.*/
+char	*ft_strncat(char *dst, const char *src, size_t n);
+
+/*FT_STRLCAT - This function will append string src to string dst if the
+ * BUFFER can guarantee NUL-termination and there is room to do. Room for
+ * NUL should be included in dstsize.*/
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+
+
 
 #endif
