@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 11:42:49 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/24 11:43:26 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/27 14:04:16 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,16 @@
 
 char	*ft_strrchar(const char *s, int c)
 {
+	int i;
 
+	i = (ft_strlen(s) + 1);
+	while (i >= 0)
+	{
+		if (s[i] == c)
+		{
+			return ((char *)s);
+		}
+		i--;
+	}
+	return (NULL);
 }

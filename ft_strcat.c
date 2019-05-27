@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 10:42:21 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/27 09:53:34 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/27 10:20:27 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ char	*ft_strcat(char *dst, const char *src)
 		j++;
 	}
 	dst[i + j] = '\0';
-	return (*dst);
+	return (dst);
 }
