@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/24 11:41:25 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/27 09:52:05 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,7 +116,7 @@ void	ft_putstr(const char *str);
 /*FT_STRCAT - This function will append a copy of a null terminated string
  * s2 to the end of the null terminated string s1. Then it will add a null
  * terminator string '\0'.*/
-char	*ft_strncat(char *dst, const char *src);
+char	*ft_strcat(char *dst, const char *src);
 
 /*FT_STRNCAT - This function wiil append not more that n characters from
  * string s2 to the end of string s1 and then add the termiantor character
