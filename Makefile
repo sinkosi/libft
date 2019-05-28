@@ -1,6 +1,6 @@
 NAME	= libft.a
 
-SRC		=	*.c
+SRC		=	$(wildcard *.c)
 
 OBJ		= $(SRC:.c=.o)
 CC		= gcc

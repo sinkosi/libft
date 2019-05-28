@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:30:33 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/22 15:30:31 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/28 10:46:24 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 
 int ft_atoi(const char *nptr)
 {
+	if(*nptr == '\0')
+		return 0;
 	int result;
 	int sign;
 	int i;
@@ -26,7 +28,6 @@ int ft_atoi(const char *nptr)
 	sign = 1;
 	result = 0;
 	i = 0;
-
 	/*The following part is a while loop to removed tabs and whitespaces*/
 	while((nptr[i] >= '\t' && nptr[i] <= '\r') || nptr[i] == ' ')
 		i++;
