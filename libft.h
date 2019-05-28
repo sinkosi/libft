@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/27 16:18:50 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/28 13:49:48 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,6 +149,6 @@ char	*ft_strstr(const char *haystack, const char *needle);
  * 'needle' in the string' haystack up to n characters. It returns hay-
  * stack if needle empty. If no needle is found it returns NULL, if 
  * found it will return a pointer to the occurence of needle.*/
-char	*ft_strnstr(const char *haystack, const char *needle);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 #endif
