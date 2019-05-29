@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 16:15:32 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/21 16:10:13 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/29 08:29:34 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t i;
-	int control;
+	size_t	i;
+	size_t	control;
 
 	i = 0;
 	control = 0;

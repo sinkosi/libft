@@ -1,7 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/29 08:13:57 by sinkosi           #+#    #+#             */
+/*   Updated: 2019/05/29 08:21:20 by sinkosi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void ft_putstr(const char *str)
+void	ft_putstr(const char *str)
 {
-	while(*str)
+	size_t i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (ft_isprint(str[i] == 0))
+		{
+			return (0);
+		}
+		i++;
+	}
+	while (*str)
 		write(1, str++, 1);
 }
