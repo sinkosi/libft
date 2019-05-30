@@ -6,10 +6,13 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 14:53:15 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/30 14:53:35 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/30 15:03:39 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
+void	*ft_memcpy(void *dst, const void *src, size_t n)
+{
+	
+}

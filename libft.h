@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/30 14:44:41 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/30 15:42:26 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,16 +103,6 @@ int ft_strcmp(const char *s1, const char *s2);
  * they are not equal.*/
 int ft_strncmp(const char *s1, const char *s2, size_t n);
 
-/*FT_PUTCHAR - This function will put a character to the standard output.
- * It is limited to one char and utilises the write function.
- */
-void	ft_putchar(char c);
-
-/*FT_PUTSTR - This function will print a string to the standard output.
- * It is limited by the '\0' terminator to show the end of the char string.
- */
-void	ft_putstr(const char *str);
-
 /*FT_STRCAT - This function will append a copy of a null terminated string
  * s2 to the end of the null terminated string s1. Then it will add a null
  * terminator string '\0'.*/
@@ -170,5 +160,47 @@ void	*ft_memset(void *b, int c, size_t len);
  * zeroed bytes to the string s. If n is zero, ft_bzero() does
  * nothing*/
 void	*ft_bzero(void *s, size_t n);
+
+/*FT_MEMCPY - This function will copy memory area. It copies n bytes from
+ * memory area src to memory area dst. The ft_memcpy() function returns
+ * the original value of dst.*/
+void	*ft_memcpy(void *dst, const void *src, size_t n);
+
+/*FT_MEMCCPY - This function will copy a byte string until it finds a char.
+ * The memccpy() function copies bytes from src to dst. If the char c
+ * occurs in the string src. The copy stops and a pointer is returned. */
+void	*ft_memccpy(void *dst, const void *src, size_t n);
+
+/*FT_MEMMOVE - This function will copy a byte string. It takes len bytes
+ * from src to dst. The strings may overlap. The function returns the 
+ * original value of dst.*/
+void	*ft_memmove(void *dst, const void *src, size_t len);
+
+/*FT_MEMCHR - This function will locate the first occurence of c in string
+ * s. The function returns a pointer to the byte located, or Null if no
+ * such byte exists within n bytes.*/
+void	*ft_memchr(const void *s, int c, size_t n);
+
+/*FT_MEMCMP - This function compares byte string s1 against s2. Both strings
+ * are assumed to be n bytes long. The function returns zero if the two
+ * strings are identical, otherwise it returns the difference. (S1 - S2)*/
+void	*ft_memcmp(const void *s1, const void *s2, size_t n);
+
+/* ************************************************************************** */
+/*                                                                            */
+/*								  PART TWO									  */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*FT_PUTCHAR - This function will put a character to the standard output.
+ * It is limited to one char and utilises the write function.
+ */
+void	ft_putchar(char c);
+
+/*FT_PUTSTR - This function will print a string to the standard output.
+ * It is limited by the '\0' terminator to show the end of the char string.
+ */
+void	ft_putstr(const char *str);
+
 
 #endif
