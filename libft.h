@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/28 13:49:48 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/30 14:44:41 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,10 +145,30 @@ char	*ft_strrchr(const char *s, int c);
  */
 char	*ft_strstr(const char *haystack, const char *needle);
 
-/*FT_STRNSTR - THis function locates the first occurrence of the string
+/*FT_STRNSTR - This function locates the first occurrence of the string
  * 'needle' in the string' haystack up to n characters. It returns hay-
  * stack if needle empty. If no needle is found it returns NULL, if 
  * found it will return a pointer to the occurence of needle.*/
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+
+/*FT_STRDUP - This function allocates sufficient memory for a copy of
+ * the string s1, does the copy, and returns a pointer to it. If in-
+ * sufficient memory is available, NULL is returned.*/
+char	*ft_strdup(const char *s1);
+
+/*FT_STRNDUP - This function allocates sufficient memory for a copy
+ * of the string s1. The function copies at most n characters from
+ * the string s1 always NUL terminating the copied string*/
+char	*ft_strndup(const char *s1, size_t n);
+
+/*FT_MEMSET - This funtion writes len bytes of value c (converted to an
+ * unsigned char) to the string b. The memset() function returns its
+ * first argument*/
+void	*ft_memset(void *b, int c, size_t len);
+
+/*FT_BZERO - This function writes zeroes to a byte string. It writes n
+ * zeroed bytes to the string s. If n is zero, ft_bzero() does
+ * nothing*/
+void	*ft_bzero(void *s, size_t n);
 
 #endif
