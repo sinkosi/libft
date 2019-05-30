@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/30 15:42:26 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/30 16:26:55 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -200,7 +200,31 @@ void	ft_putchar(char c);
 /*FT_PUTSTR - This function will print a string to the standard output.
  * It is limited by the '\0' terminator to show the end of the char string.
  */
-void	ft_putstr(const char *str);
+void	ft_putstr(const char *s);
 
+/*FT_PUTENDL - This function will print a string to the standard output 
+ * followed by a newline char. It is limited by the '\0' terminator to show
+ * the end of the char string. */
+void	ft_putendl(const char *s);
+
+/*FT_PUTNBR - This function will output the integer n to the standard
+ * output.
+ */
+void	ft_putnbr(int n);
+
+/*FT_PUTCHAR_FD - This function will output the char c to the file descriptor
+ * fd.
+ */
+void	ft_putchar_fd(char c, int fd);
+
+/*FT_PUTSTR_FD - This function will output the str s to the file descriptor
+ * fd.
+ */
+void	ft_putstr_fd(const char *s, int fd);
+
+/*FT_PUTENDL_FD - This function will output the string s to the file
+ * descriptor followed by a newline.
+ */
+void	ft_putendl_fd(const char *s, int fd);
 
 #endif

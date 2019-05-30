@@ -6,14 +6,14 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 08:13:57 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/29 12:05:49 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/30 15:50:12 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(const char *str)
+void	ft_putstr(const char *s)
 {
-	while (*str)
-		write(1, str++, 1);
+	while (*s)
+		write(1, s++, 1);
 }
