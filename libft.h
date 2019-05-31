@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/30 16:26:55 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/31 11:37:23 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -192,6 +192,11 @@ void	*ft_memcmp(const void *s1, const void *s2, size_t n);
 /*                                                                            */
 /* ************************************************************************** */
 
+/*FT_ITOA - This function will allocate and return a fresh string ending
+ * with '\0'.
+ */
+char	*ft_itoa(int n);
+
 /*FT_PUTCHAR - This function will put a character to the standard output.
  * It is limited to one char and utilises the write function.
  */
@@ -227,4 +232,8 @@ void	ft_putstr_fd(const char *s, int fd);
  */
 void	ft_putendl_fd(const char *s, int fd);
 
+/*FT_PUTNBR_FD - This function will output the integer n to the file
+ * descriptor fd.
+ */
+void	ft_putnbr_fd(int n, int fd);
 #endif

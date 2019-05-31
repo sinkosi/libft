@@ -6,13 +6,19 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 15:15:09 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/30 15:15:47 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/31 11:46:39 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memccpy(void *dst, const void *src, size_t n)
+void	*ft_memccpy(void *dst, const void *src, size_t n)
 {
-
+	if (n < 0)
+		return (0);
+	else if (n > 0)
+		src++;
+	else
+		dst++;
+	return (0);
 }

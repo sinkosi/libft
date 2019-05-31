@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 16:25:15 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/30 16:26:52 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/31 11:26:14 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_putendl_fd(const char *s, int fd)
 {
 	ft_putstr_fd(s, fd);
-	ft_putchar('\n', fd);
+	ft_putchar_fd('\n', fd);
 }
