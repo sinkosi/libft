@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:30:33 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/29 11:11:17 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/05/31 13:30:47 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int ft_atoi(const char *nptr)
 		i++;
 	}
 
-	while(nptr[i] != '\0')
+	while(nptr[i] != '\0' && ft_isdigit(nptr[i+1]))
 	{
 		while(nptr[i] >= '0' && nptr[i] <= '9')
 		{
