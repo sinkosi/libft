@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/31 11:37:23 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/03 13:17:26 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -192,6 +192,10 @@ void	*ft_memcmp(const void *s1, const void *s2, size_t n);
 /*                                                                            */
 /* ************************************************************************** */
 
+/*FT_TOCHAR - This function will take an integer as an argument and 
+ * return it as a char.
+ */
+char	ft_tochar(int n);
 /*FT_ITOA - This function will allocate and return a fresh string ending
  * with '\0'.
  */
