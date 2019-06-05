@@ -15,27 +15,30 @@
 char	*ft_itoa(int n)
 {
 	char a;
-	long i;
+	char *b;
+	size_t i;
 	char *result;
 
-	i = n;
-	if (i < 0)
+	i = ft_numlen(n);
+	result = ft_strnew(i);
+	if (n < 0)
 	{
 		a = '-';
-		result = "-";
-		i *= -1;
+		n *= -1;
 	}
-	else
-	{	
-		a = ' ';
-		result = "";
-	}
-	if (i > 9)
+	while (n > 9)
 	{
-		ft_itoa(i / 10);
+		b = ft_tostr(n % 10);
+		result = ft_strcat(result, b);
+		n = (n / 10);
 	}
-	a = ft_tochar(n % 10);
-	result = ft_strcat(result, "N");
+	b = ft_tostr(n % 10);
+	result = ft_strcat(result, b);
+	if (a == '-')
+	{
+		b = ft_tostr(a);
+		result = ft_strcat(result, b);
+	}
+	result = ft_strrev(result);
 	return (result);
-//	result = (char *)malloc(sizeof(j))		
 }
