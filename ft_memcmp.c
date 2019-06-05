@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 11:45:21 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/05 12:12:13 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/05 13:22:16 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	char *str1;
-	char *str2;
-	size_t i;
+	char			*str1;
+	char			*str2;
+	size_t			i;
 	unsigned char	control;
 
 	i = 0;

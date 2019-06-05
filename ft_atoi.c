@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:30:33 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/31 13:30:47 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/05 17:02:11 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,29 +16,34 @@ int ft_atoi(const char *nptr)
 {
 	if(*nptr == '\0')
 		return 0;
-	int result;
-	int sign;
-	int i;
+	long result;
+	long sign;
+	long i;
 
 	sign = 1;
 	result = 0;
 	i = 0;
 	while((nptr[i] >= '\t' && nptr[i] <= '\r') || nptr[i] == ' ')
 		i++;
-	if(sign == '-')
+	if (nptr[i] == '-')
 		sign = -1 * sign;
 	while(nptr[i] == '-' || nptr[i] == '+')
 	{
 		i++;
-	}
-
-	while(nptr[i] != '\0' && ft_isdigit(nptr[i+1]))
+	}	
+	while(nptr[i] != '\0' && (ft_isdigit(nptr[i+1]) == 1))
 	{
+		if (ft_isdigit(nptr[i]) == 0)
+			return (0);
 		while(nptr[i] >= '0' && nptr[i] <= '9')
 		{
 			result = (result * 10) + (nptr[i] - 48);
 			i++;
 		}
 	}
-	return (sign * result);
+	if ((sign * result) < -9223372036854775807)
+		return (0);
+	else if ((sign * result) > 9223372036854775807)
+		return (-1);
+	return ((int)(sign * result));
 }
