@@ -1,9 +1,9 @@
-#include "libft.c"
+#include "libft.h"
 
-void	*ft_tostr(char c)
+char	*ft_tostr(char c)
 {
 	char *s;
 
-	s = (char *)c;
+	s = (char *)&c;
 	return (s);
 }

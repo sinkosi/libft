@@ -6,5 +6,5 @@ void	ft_strclr(char *str)
 
 	i = ft_strlen(str);
 	if(i > 0)
-		ft_bzero(s, i);
+		ft_bzero(str, i);
 }

@@ -3,9 +3,9 @@
 void	ft_memdel(void **ap)
 {
 	if (!(ap))
-		return (NULL);
+		return;// (NULL);
 	else if (!(*ap))
-		return (NULL);
+		return;// (NULL);
 	else if (ap)
 		free(ap);
 	else if (*ap)

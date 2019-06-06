@@ -3,9 +3,9 @@
 void	ft_strdel(char **as)
 {
 	if (!(as))
-		return (NULL);
+		return;
 	else if (!(*as))
-		return (NULL);
+		return;
 	if (as)
 	{
 		free(as);

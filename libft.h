@@ -312,6 +312,11 @@ char	ft_tochar(int n);
 */
 char	*ft_tostr(char c);
 
+//
+char	*ft_strrev(char *s);
+//
+size_t	ft_numlen(int n);
+
 /*
 ** FT_ITOA - This function will allocate and return a fresh string ending
 ** with '\0'.
@@ -366,5 +371,7 @@ void	ft_putendl_fd(const char *s, int fd);
 ** descriptor fd.
 */
 void	ft_putnbr_fd(int n, int fd);
+
+//void	*ft_strdel(char **as);
 
 #endif
