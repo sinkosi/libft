@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/05 12:11:50 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/07 09:52:08 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -312,9 +312,17 @@ char	ft_tochar(int n);
 */
 char	*ft_tostr(char c);
 
-//
+/*
+** FT_STRREV - This function takes a string as an argument and returns
+** the string in reverse. It does not alter the string it is given but
+** rather returns a new string.
+*/
 char	*ft_strrev(char *s);
-//
+
+/*
+** FT_NUMLEN - This function takes an int n as an argument and returns
+** the length of the number of digits as a result of size_t.
+*/
 size_t	ft_numlen(int n);
 
 /*
@@ -371,7 +379,5 @@ void	ft_putendl_fd(const char *s, int fd);
 ** descriptor fd.
 */
 void	ft_putnbr_fd(int n, int fd);
-
-//void	*ft_strdel(char **as);
 
 #endif
