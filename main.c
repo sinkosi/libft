@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:12:08 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/07 10:44:49 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/07 15:01:42 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,24 @@ int	main(void)
 	test_01(a);
 	test_01(b);
 	ft_putstr(output);
-	char c = '5';
+	char c = 'a';
 	test_02(a);
 	test_02(b);
 	test_02(c);
 	ft_putstr(output);
 	char *str1 = ("This is an arbitrary string and we will get its ft_strlen\n\n\n");	
 	ft_putstr(str1);
-/*	putnbr(-2147483647);
-	ft_putchar('\n');*/	
-	ft_putnbr(-2147483647 - 1);
+	int i = -1;
+	size_t j = ft_numlen(i);
+	ft_putnbr(j);
+//char* t_itoa;
+//	t_itoa = ft_itoa(i);
+//	ft_putstr(t_itoa);
+	ft_putchar('\n');	
+	ft_putnbr('a');
 	ft_putchar('\n');
+	char *chris;
+	chris = ft_tostr(c);
+	ft_putstr(chris);
 	return (0);
 }

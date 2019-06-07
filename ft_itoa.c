@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 11:36:22 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/03 15:28:09 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/07 14:48:50 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,28 +17,31 @@ char	*ft_itoa(int n)
 	char a;
 	char *b;
 	size_t i;
+	int j;
 	char *result;
 
-	i = ft_numlen(n);
+	i = ft_numlen(n) + 1;
+	j = 0;
 	result = ft_strnew(i);
+	ft_putstr("\nTEST POINT #01\n");
 	if (n < 0)
 	{
-		a = '-';
 		n *= -1;
+		result[j] = '-';
+		ft_putstr("TEST POINT #02\n");
+		ft_putstr(result);
+		j++;
+		ft_putstr("\nTEST POINT #03\n");
 	}
-	while (n > 9)
-	{
-		b = ft_tostr(n % 10);
-		result = ft_strcat(result, b);
-		n = (n / 10);
-	}
-	b = ft_tostr(n % 10);
-	result = ft_strcat(result, b);
-	if (a == '-')
-	{
-		b = ft_tostr(a);
-		result = ft_strcat(result, b);
-	}
-	result = ft_strrev(result);
+	a = ft_tochar(n % 10);
+	ft_putchar(a);
+	ft_putstr("\nTEST POINT #04\n");
+	b = ft_tostr(a);
+	ft_putstr(b);
+	ft_putchar('\n');
+	result[j] = a;
+	ft_putstr("TEST POINT #05\n");
+
+	ft_putstr("TEST POINT #06\n");
 	return (result);
 }
