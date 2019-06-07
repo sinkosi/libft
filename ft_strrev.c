@@ -9,11 +9,12 @@ char	*ft_strrev(char *s)
 	i = ft_strlen(s);
 	a = ft_strnew(i + 1);
 	j = 0;
-	while (j <= ft_strlen(s))
+	while (j < ft_strlen(s))
 	{
-		a[j] = s[i];
+		a[j] = s[i - 1];
 		j++;
+		i--;
 	}
-	a[j + 1] = '\0';
+	a[j] = '\0';
 	return (a);
 }

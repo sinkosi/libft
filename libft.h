@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/07 09:52:08 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/07 15:24:45 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -310,7 +310,7 @@ char	ft_tochar(int n);
 ** FT_TOSTR - This function will take a char as an argument and cast it
 ** as a string of length one.
 */
-char	*ft_tostr(char c);
+char	*ft_tostr(char s[], char c);
 
 /*
 ** FT_STRREV - This function takes a string as an argument and returns
