@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/08 12:42:14 by sinkosi           #+#    #+#             */
+/*   Updated: 2019/06/08 12:44:39 by sinkosi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_strnequ(char const *s1, char const *s2, size_t n)
@@ -6,7 +18,8 @@ int	ft_strnequ(char const *s1, char const *s2, size_t n)
 	int control;
 
 	i = 0;
-	if(ft_strlen(s1) == 0 || ft_strlen(s2) == 0)
+	control = 0;
+	if(s1 == NULL || s2 == NULL)
 		return (0);
 	while ((s1[i] != '\0' || s2[i] != '\0') && (i <= n))
 	{
