@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 11:36:22 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/08 12:55:33 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/08 14:33:54 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,5 @@ char	*ft_itoa(int n)
 	}
 	if (sign == '-')
 		ft_strcat(result, "-");
-	
 	return (ft_strrev(result));
 }
