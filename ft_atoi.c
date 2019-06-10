@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:30:33 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/05 17:02:11 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/10 14:32:46 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,5 @@ int ft_atoi(const char *nptr)
 			i++;
 		}
 	}
-	if ((sign * result) < -9223372036854775807)
-		return (0);
-	else if ((sign * result) > 9223372036854775807)
-		return (-1);
 	return ((int)(sign * result));
 }
