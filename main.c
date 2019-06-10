@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:12:08 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/07 16:41:56 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/10 11:05:40 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ int	main(void)
 	ft_putchar('\n');
 	ft_putstr(t_itoa);
 	ft_putchar('\n');	
-/*	ft_putnbr('a');
+	ft_putnbr(-66564844);
 	ft_putchar('\n');
-	char chris[2];
+/*	char chris[2];
 	ft_tostr(chris, c);
 	ft_putstr(chris);*/
 	return (0);

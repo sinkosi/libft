@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 13:01:03 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/08 13:01:05 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/10 09:43:00 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,9 @@
 
 void	ft_memdel(void **ap)
 {
-	if (!(ap))
-		return;// (NULL);
-	else if (!(*ap))
-		return;// (NULL);
-	else if (ap)
-		free(ap);
-	else if (*ap)
+	if (ap != NULL)
+	{
 		free(*ap);
-	ap = 0;
-	*ap = 0;
+		*ap = NULL;
+	}
 }

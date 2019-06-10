@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 10:42:21 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/27 10:20:27 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/10 09:40:57 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,11 @@
 
 char	*ft_strcat(char *dst, const char *src)
 {
-	int i;
-	int j;
+	size_t i;
+	size_t j;
 
-	i = 0;
+	i = ft_strlen(dst);
 	j = 0;
-	while (dst[i] != '\0')
-	{
-		i++;
-	}
 	while (src[j] != '\0')
 	{
 		dst[i + j] = src[j];

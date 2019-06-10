@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 13:01:17 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/08 13:01:19 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/10 10:11:59 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,9 @@
 
 void	ft_strdel(char **as)
 {
-	if (!(as))
-		return;
-	else if (!(*as))
-		return;
-	if (as)
-	{
-		free(as);
-		as = 0;
-	}
-	else if (*as)
+	if (as != NULL)
 	{
 		free(*as);
-		*as = 0;
+		*as = NULL;
 	}
-	free(*as);
 }

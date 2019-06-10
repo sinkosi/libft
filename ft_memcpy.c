@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 14:53:15 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/08 15:40:35 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/10 10:15:36 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	s2 = (char *)src;
 	i = 0;
 
-/*	if (s1 == NULL || s2 == NULL)
-		return ((char *)src);
-	The solution above works but it also causes a problem
-	because it does not segfault*/
+	if (s1 == '\0' && s2 == '\0')
+		return (NULL);
 	if (n == 0)
 		return (s1);
 	while (i < n)

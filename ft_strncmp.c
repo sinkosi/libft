@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 16:15:32 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/08 15:07:45 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/10 09:20:05 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,20 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
-	size_t	control;
-	unsigned char *str1;
-	unsigned char *str2;
+	size_t i;
 
 	i = 0;
-	control = 0;
-	str1 = (unsigned char *)s1;
-	str2 = (unsigned char *)s2;
 	if (ft_strlen(s1) == 0 && ft_strlen(s2) != 0)
 	{
-		control = (str1 - str2);
-		return (control);
+		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 	}
 	else if (ft_strlen(s1) != 0 && ft_strlen(s2) == 0)
 	{
-		control = (str1 - str2);
-		return (control);
+		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 	}
-	while ((i <= n && control == 0) && (str1[i] != '\0' && str2[i] != '\0'))
+	while ((s1[i] != '\0' && s2[i] != '\0') && (s1[i] == s2[i] && i <= n))
 	{
-		control = s1[i] - s2[i];
 		i++;
 	}
-	return ((unsigned int)control);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
