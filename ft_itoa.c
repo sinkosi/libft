@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 11:36:22 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/08 14:33:54 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/10 16:08:03 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,10 @@ char	*ft_itoa(int n)
 {
 	char b[2];
 	size_t i;
-	size_t j;
 	char *result;
 	char sign;
 
 	i = ft_numlen(n);
-	j = 0;
 	result = ft_strnew(i);
 	if (n == 0)
 		return ("0");
@@ -34,10 +32,10 @@ char	*ft_itoa(int n)
 	{
 		ft_tostr(b, ft_tochar(n % 10));
 		n /= 10;
-		j++;
 		ft_strcat(result, b);
 	}
 	if (sign == '-')
 		ft_strcat(result, "-");
+	sign = ' ';
 	return (ft_strrev(result));
 }
