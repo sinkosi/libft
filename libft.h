@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/07 15:24:45 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/10 17:01:58 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+typedef struct	s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct	s_list	*next;
+}				t_list;
 /*
 ** FT_STRLEN - This function returns the length of the string input
 */
