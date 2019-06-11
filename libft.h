@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/10 17:01:58 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/11 12:41:06 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -304,7 +304,30 @@ void	ft_strclr(char *s);
 ** of the string passed as argument. Each character is passed by
 ** address to f to be modified if neccessary.
 */
-void ft_striter(char *s, void (*f)(char *));
+void	ft_striter(char *s, void (*f)(char *));
+
+/*
+** FT_STRITERI - This function applies the function f to each
+** character of the string passed as argument, and passing its index
+** as first argument. Each character is passed by address to f to be
+** be modified if necessary.
+*/
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+
+/*
+** FT_STRMAP - This function applies the function f to each 
+** character given as argument to create a 'fresh' new string (with
+** malloc) resulting from the successive applications of f.
+*/
+char	*ft_strmap(char const *s, char (*f)(char));
+
+/*
+** FT_STRMAPI - This function applies the function f to each character
+** of the string given as argument by giving its index as first
+** argument to create a 'fresh' new string (with malloc) resulting
+** from the successive applications fo f.
+*/
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 /*
 ** FT_TOCHAR - This function will take an integer as an argument and 
@@ -385,5 +408,85 @@ void	ft_putendl_fd(const char *s, int fd);
 ** descriptor fd.
 */
 void	ft_putnbr_fd(int n, int fd);
+
+/* ************************************************************************** */
+/*                                                                            */
+/*								  BONUS PART								  */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*
+**			THIS PART IS ABOUT LINKED LISTS (STRUCTS)
+**
+** Below are definitions of what is contained in the struct and their purpose
+*/
+
+/*
+** content	-	The data contained in the link. The void * allows to store any
+**				kind of data.
+*/
+
+/*
+** content size	-	The size of data stored. The void * type doesn't allow you
+**				to know the size of the pointed data, as a consequence, it is 
+**				necessary to save its size. For instance, the size of the
+**				string '42' is 3 bytes and the 32bits integer 42 has a size of
+**				4 bytes.
+*/
+
+/*
+** next	 	-	The next link's address or NULL if it's the last link.
+*/
+
+/*
+** FT_LSTNEW - Allocates (with malloc) and returns a 'fresh' link. The variables
+**			'content' and 'content_size' of the new link are initialised by 'copy' of
+**			the parameters of the function. If the parameter 'content' is nul, the
+**			variable content is initialised to NULL and the variable 'content_size'
+**			is initialised to 0 even if the parameter 'content_size' isn't. The
+**			variable 'next' is initialised to NULL. If the allocation fails, the
+**			function returns NULL.
+*/
+t_list	*ft_lstnew(void const *content, size_t content_size);
+
+/*
+** FT_LSTDELONE - Takes as a parameter a link's pointer address and frees the memory
+**			of the link's content using the function 'del' given as a parameter, then
+**			frees the link's memory using 'free'. The memory of 'next' must not be
+**			freed under any circumstance. Finally, the pointer to the link that was
+**			just freed must be set to NULL (read ft_memdel).
+*/
+void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+
+/*
+** FT_LSTDEL - Takes as a parameter the address of a pointer to a link and frees
+**			the memory of this link and every successor of that link using the
+**			functions 'del' and 'free'. Finally the pointer to the link that was
+**			just freed must be set to NULL. (read ft_memdel).
+*/
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+
+/*
+** FT_LSTADD - This function adds the element 'new' and the beginnning of the list.
+**			The function takes the address of a pointer as a parameter, the pointer
+**			points to the first link of a list. The second parameter is the link to
+**			add at the beginning of the list.
+*/
+void	ft_lstadd(t_list **alst, t_list *new);
+
+/*
+** FT_LSTITER - This function iterates the list 'lst' and applies the function '(f)'
+**			to each link. A pointer to the first link is taken as the first parameter.
+**			The address of a function to apply to each link of a list is taken as a
+**			second parameter.
+*/
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+
+/*
+** FT_LSTMAP - This function iterates a lst and applies the function '(f)' to each link
+**			to create a 'fresh' list (using malloc) as result from the successive
+**			applications of '(f)'. If the allocation fails, the function returns NULL.
+*/
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem);
 
 #endif

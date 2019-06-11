@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 12:51:43 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/10 15:41:19 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/11 11:51:28 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
 			i++;
 		}
 	}*/
+	if (len == 0)
+		return (dst);
 	if (dst == src)
 		return (dst);
 	dst = ft_memcpy(dst, src, len);

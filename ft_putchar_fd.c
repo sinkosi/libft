@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 16:18:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/31 11:26:41 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/11 09:58:09 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,8 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+	if (ft_isascii(c) == 0)
+		write(1, "", 1);
+	else
+		write(fd, &c, 1);
 }

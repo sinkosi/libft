@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 11:29:33 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/07 12:56:17 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/11 09:09:23 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,10 @@ void	ft_putnbr_fd(int n, int fd)
 		return;
 	}
 	if (n >= 2147483647)
+	{
 		ft_putstr_fd("2147483647", fd);
 		return;
+	}
 	if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
