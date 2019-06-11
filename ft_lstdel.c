@@ -6,8 +6,13 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 17:03:14 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/10 17:03:15 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/11 15:17:24 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+/*
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+{
 
+}*/

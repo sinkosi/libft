@@ -6,8 +6,13 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 17:03:30 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/10 17:03:31 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/11 15:14:56 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+/*
+t_list	*ft_lstnew(void const *content, size_t content_size)
+{
 
+}*/

@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 11:36:22 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/10 16:08:03 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/11 16:25:53 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_itoa(int n)
 	result = ft_strnew(i);
 	if (n == 0)
 		return ("0");
+	if (isimin(n) == 1)
+		return (ft_strcpy(result, "-2147483648"));
 	if (n < 0)
 	{
 		n *= -1;

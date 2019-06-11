@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 13:13:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/11 11:26:32 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/11 16:04:13 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,21 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	i;
-	char *newStr;
+	char    *str;
 
 	i = (ft_strlen(s1) + ft_strlen(s2));
-	newStr = ft_strnew(i);
+	str = ft_strnew(i);
 	if (s1 == '\0')
 		return ((char *)s2);
 	else if (s2 == '\0')
 		return ((char *)s1);
-	if(newStr == NULL)
+	if (str == NULL)
 		return (NULL);
 	else
 	{
-		newStr = ft_strcat(newStr, s1);
-		newStr = ft_strcat(newStr, s2);
-		newStr = ft_strcat(newStr, "\0");
-		return newStr;
+		str = ft_strcat(str, s1);
+		str = ft_strcat(str, s2);
+		str = ft_strcat(str, "\0");
+		return (str);
 	}
 }

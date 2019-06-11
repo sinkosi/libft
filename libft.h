@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/11 12:41:06 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/11 16:22:25 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,24 +26,25 @@ typedef struct	s_list
 	size_t			content_size;
 	struct	s_list	*next;
 }				t_list;
+
 /*
 ** FT_STRLEN - This function returns the length of the string input
 */
 size_t ft_strlen(const char *c);
 
 /*
-**FT_ATOI - This function reads a string and returns it as an integer
+** FT_ATOI - This function reads a string and returns it as an integer
 */
 int ft_atoi(const char *nptr);
 
 /*
-**FT_ISLOWER - Checks a char, input as an int, references the ascii table to
+** FT_ISLOWER - Checks a char, input as an int, references the ascii table to
 ** see if it is a valid lowercase char
 */
 int ft_islower(int c);
 
 /*
-**FT_ISUPPER - Checks a char, input as an int, references the ascii table to
+** FT_ISUPPER - Checks a char, input as an int, references the ascii table to
 ** see if it is a valid uppercase char
 */
 int ft_isupper(int c);
@@ -56,57 +57,71 @@ int ft_isupper(int c);
 int ft_isalpha(int c);
 
 /*
-**FT_ISDIGIT - Checks a char, input as an int, references the ascii table to
+** FT_ISDIGIT - Checks a char, input as an int, references the ascii table to
 ** see if it is a valid digit between 0 and 9.
 */
 int ft_isdigit(int c);
 
 /*
-**FT_ISALNUM - Checks a char, input as an int, references the ascii table to
+** FT_ISALNUM - Checks a char, input as an int, references the ascii table to
 ** see if it is a valid digit or letter of the alphabet. It is the equivalent
 ** of (ft_isalpha(c) || ft_isdigit(c))
 */
 int ft_isalnum(int c);
 
 /*
-**FT_ISBLANK - Checks a char, input as an int, references the ascii table to
+** FT_ISBLANK - Checks a char, input as an int, references the ascii table to
 ** see if it is a blank space or a tab. It checks for 32 or 9.
 */
 int ft_isblank(int c);
 
 /*
-**FT_ISSPACE - Checks a char, input as an int, references the ascii table to
+** FT_ISSPACE - Checks a char, input as an int, references the ascii table to
 ** see if it is a space, '\f' up to the point of '\v'
 */
 int ft_isspace(int c);
 
 /*
-**FT_ISASCII - Checks whether the input is an unsigned char and a valid char
+** FT_ISASCII - Checks whether the input is an unsigned char and a valid char
 ** in terms of the ASCII table.
 */
 int ft_isascii(int c);
 
 /*
-**FT_ISGRAPH - Checks input and references ASCII table for printable
+** FT_ISGRAPH - Checks input and references ASCII table for printable
 ** character sets excluding space.
 */
 int ft_isgraph(int c);
 
 /*
-**FT_ISPRINT - Checks input and references ASCII table for printable
+** FT_ISPRINT - Checks input and references ASCII table for printable
 ** character sets including space.
 */
 int ft_isprint(int c);
 
 /*
-**FT_ISXDIGIT - Checks input and references as to whether it is a hexadecimal
+** FT_ISXDIGIT - Checks input and references as to whether it is a hexadecimal
 ** digit i.e	0 1 2 3 4 5 6 7 8 9 A B C D E F
 ** 								    a b c d e f
 */
 int ft_isxdigit(int c);
 
 /*
-**FT_TOUPPER - This function coverts a lowercase letter to an uppercase letter.
+** FT_ISIMAX - This function will take an integer as an argument and return 1
+** if the integer is greater than or equal to 2147483647. It will return 0, if it
+** less
+*/
+int	isimax(int n);
+
+/*
+** FT_ISIMIN - This function will take an integer as an argument and return 1
+** if the integer is less than or equal to -2147483648. It will return 0, if it
+** is more.
+*/
+int isimin(int n);
+
+/*
+** FT_TOUPPER - This function coverts a lowercase letter to an uppercase letter.
 ** The function will return the uppercase letter if it is successful, or the
 ** original input if it fails.
 */
@@ -240,6 +255,19 @@ void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 
 /*
+**FT_MEMSIZE - This function will take a parameter as an argument and 
+** return its allocated bytes as an unsigned int.
+*/
+unsigned int	ft_memsize(void *s1);
+
+/*
+** FT_MEMSWAP - This function will take two paramaters and switch their
+** values. It will take s1 and s2, and return the values in such a way
+** that s1 will have the value of s2, and s2 will have the value of s1.
+*/
+void	ft_memswap(void *s1, void *s2);
+ 
+/*
 ** FT_MEMMOVE - This function will copy a byte string. It takes len bytes
 ** from src to dst. The strings may overlap. The function returns the 
 ** original value of dst.
@@ -328,6 +356,55 @@ char	*ft_strmap(char const *s, char (*f)(char));
 ** from the successive applications fo f.
 */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+
+/*
+** FT_STREQU - This function performs a lexicographical comparison
+** between s1 and s2. If the 2 strings are identical the function
+** returns 1, or 0 otherwise.
+*/
+int	ft_strequ(char const *s1, char const *s2);
+
+/*
+** FT_STRNEQU - This function performs a lexicographical comparison
+** betwenn s1 and s2 up to 'n characters' or until a '\0' is
+** reached. If the 2 strings are identical, the function returns
+** 1, or 0 otherwise.
+*/
+int	ft_strnequ(char const *s1, char const *s2, size_t n);
+
+/*
+** FT_STRSUB - This funtion allocates (with malloc) and returns a
+** 'fresh' string given as argument. The substring begins at index
+** 'start' and is of size 'len'. If 'start' and 'len' aren't refer-
+** ing to a valid substring, the behaviour is undefined. If the
+** allocation fails, the function returns NULL.
+*/
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
+
+/*
+** FT_STRJOIN - This function allocates (with malloc) and returns a
+** 'fresh' string ending with '\0', result of the concatenation of
+** s1 and s2. If the allocation fails, the function returns NULL.
+*/
+char	*ft_strjoin(char const *s1, char const *s2);
+
+/*
+** FT_STRTRIM - This function allocates (with malloc) and returns a
+** copy of the string given as argument without whitespaces at the
+** beginning or at the end of the string. Whitespaces are \' \', '\n'
+** and '\t'. If s has no whitespaces at the beginning or end. The
+** function returns a copy of s. If the allocation fails, the
+** function returns NULL.
+*/
+char	*ft_strtrim(char const *s);
+
+/*
+** FT_STRSPLIT - This function allocates (with malloc) and returns an
+** array of 'fresh' strings (all ending with '\0', including the 
+** array itself) obtained by splitting s using the character c as a
+** delimiter. If the allocation fails the function returns NULL.
+*/
+char	**ft_strsplit(char const *s, char c);
 
 /*
 ** FT_TOCHAR - This function will take an integer as an argument and 
@@ -487,6 +564,6 @@ void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 **			to create a 'fresh' list (using malloc) as result from the successive
 **			applications of '(f)'. If the allocation fails, the function returns NULL.
 */
-t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem);
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 #endif
