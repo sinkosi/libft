@@ -6,13 +6,9 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/11 16:22:25 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/12 16:59:33 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*This is the main header file for libft.
- * This is created by sinkosi for libft project.
- */
 
 #ifndef LIBFT_H
 # define LIBFT_H
@@ -111,14 +107,14 @@ int ft_isxdigit(int c);
 ** if the integer is greater than or equal to 2147483647. It will return 0, if it
 ** less
 */
-int	isimax(int n);
+int	ft_isimax(int n);
 
 /*
 ** FT_ISIMIN - This function will take an integer as an argument and return 1
 ** if the integer is less than or equal to -2147483648. It will return 0, if it
 ** is more.
 */
-int isimin(int n);
+int ft_isimin(int n);
 
 /*
 ** FT_TOUPPER - This function coverts a lowercase letter to an uppercase letter.

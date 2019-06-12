@@ -24,6 +24,8 @@ SRC		=	ft_memset.c		\
 		  ft_strnstr.c		\
 		  ft_strcmp.c		\
 		  ft_strncmp.c		\
+		  ft_isimin.c		\
+		  ft_isimax.c		\
 		  ft_atoi.c			\
 		  ft_isupper.c		\
 		  ft_islower.c		\
@@ -36,8 +38,6 @@ SRC		=	ft_memset.c		\
 		  ft_isblank.c		\
 		  ft_isspace.c		\
 		  ft_isgraph.c		\
-		  ft_isimin.c		\
-		  ft_isimax.c		\
 		  ft_toupper.c		\
 		  ft_tolower.c		\
 		  ft_tochar.c		\
