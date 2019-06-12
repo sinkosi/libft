@@ -96,12 +96,6 @@ $(NAME)	: $(OBJ)
 		$(CC) $(CCFLAG) $(EXTRAS) $(SRC)
 		ar rc $(NAME) $(OBJ) libft.h 
 		ranlib $(NAME)
-#							\
-.SIBO:	clean fclean		\
-	$(SIBO) : $(OBJ)		\
-		$(CC) $(CCFLAGS) $(SRC)\
-		ar rc $(SIBO) $(OBJ) libft.h\
-		ranlib $(SIBO)\
 
 all		: $(NAME)
 
