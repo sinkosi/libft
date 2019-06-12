@@ -11,17 +11,23 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
+
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	size_t i;
+	unsigned int i;
 	char *a;
 
 	i = 0;
 	start++;
 	a = ft_strnew(len);
-	ft_memcpy(a, s, len);
 	if (a == NULL)
 		return (NULL);
-	return ("DAMN");
-}*/
+	while (i < len)
+	{
+		a[i] = s[start]
+		i++;
+		start++;
+	}
+	a[i] = '\0';
+	return (a);
+}

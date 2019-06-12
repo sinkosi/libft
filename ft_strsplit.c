@@ -12,13 +12,49 @@
 
 #include "libft.h"
 
-/*char	**ft_strsplit(char const *s, char c)
+static int	checkchr(char a, char c)
+{
+	if (a == c)
+		return (1);
+	else
+		return (0);
+}
+
+char	**ft_strsplit(char const *s, char c)
 {
 	char *a;
+	size_t i;
+	size_t j;
+	size_t start;
+	size_t end;
 
-	a = ft_strnew(10);
-	ft_memcpy(a, s, 10);
-	c++;
-	return (a);
+	i = 0;
+	j = 0;
+	start = 0;
+	end = 0;
+	while (s[i] != '\0')
+	{
+		while(checkchr(s[i], c) == 1)
+				i++;
+		//This is where function finds first letter of first word.
+		start = i;
+		start = end;
+		while (checkchar(s[i], c) == 0)
+		{
+			i++;
+			end++;
+		}
+		//finds the last letter of the first word
+		a = ft_strnew(end - start);
+		while (start < end)
+		{
+			a[j] = s[start];
+			start++;
+		}
+		//This returns the string. The function could also be prototyped
+		//using ft_strsub(s, start, (end - start))
+	
+	//The next aim of this, is to put it into a table.
+	//This needs a two-point variable 
+	}	
 }
-*/
