@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 12:42:16 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/08 12:44:13 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/12 13:58:13 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_strequ(char const *s1, char const *s2)
 {
-	size_t i;
-	int control;
+	size_t	i;
+	int		control;
 
 	i = 0;
 	control = 0;

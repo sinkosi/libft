@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 11:21:35 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/10 14:47:07 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/12 13:33:25 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	i = ft_strlen(dst);
 	j = ft_strlen(src);
 	full_size = (i - dstsize - 1);
-	
 	if (full_size < dstsize)
 		return (j + dstsize);
 	else if (full_size > dstsize && dstsize > 0)
@@ -31,4 +30,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	}
 	return (i + j);
 }
-

@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 12:58:35 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/11 13:27:00 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/12 13:53:03 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnew(size_t size)
 {
-	char *s;
-	size_t len;
+	char	*s;
+	size_t	len;
 
 	len = size + 1;
 	s = (char *)malloc(sizeof(char) * len);

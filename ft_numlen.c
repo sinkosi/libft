@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 16:25:49 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/10 16:06:47 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/12 14:44:40 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,5 @@ size_t	ft_numlen(int n)
 		n /= 10;
 		i++;
 	}
-	/*ft_putnbr(i);
-	ft_putchar('\n');*/
 	return (i);
 }
-/*THIS FUNCTION NEEDS TO BE TESTED AGAIN, I 
- * ALSO NEED TO DECIDE HOW I HANDLE POSITIVE
- * AND NEGATIVE NUMBERS.
- *
- * THE LENGTH AFFECTS ITOA*/

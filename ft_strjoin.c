@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 13:13:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/11 16:04:13 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/12 14:00:32 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	i;
-	char    *str;
+	char	*str;
 
 	i = (ft_strlen(s1) + ft_strlen(s2));
 	str = ft_strnew(i);

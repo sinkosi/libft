@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 11:29:33 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/11 09:09:23 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/12 14:08:36 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ void	ft_putnbr_fd(int n, int fd)
 	if (n <= -2147483648)
 	{
 		ft_putstr_fd("-2147483648", fd);
-		return;
+		return ;
 	}
 	if (n >= 2147483647)
 	{
 		ft_putstr_fd("2147483647", fd);
-		return;
+		return ;
 	}
 	if (n < 0)
 	{

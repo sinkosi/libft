@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 13:30:10 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/11 14:32:02 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/12 14:46:26 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_memswap(void *s1, void *s2)
 {
-	void *temp;
-	unsigned int i;
-	unsigned int j;
+	void			*temp;
+	unsigned int	i;
+	unsigned int	j;
 
 	i = ft_memsize(s1);
 	j = ft_memsize(s2);
