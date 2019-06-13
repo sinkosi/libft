@@ -6,21 +6,22 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 11:36:22 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/12 16:14:26 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/13 16:46:44 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 char	*ft_itoa(int n)
-{
-	char b[2];
+{	
 	size_t i;
 	char *result;
 	char sign;
 
 	i = ft_numlen(n);
 	result = ft_strnew(i);
+	if (result == NULL)
+		return (NULL);
 	if (n == 0)
 		return ("0");
 	if (ft_isimin(n) == 1)
@@ -32,12 +33,11 @@ char	*ft_itoa(int n)
 	}
 	while (n > 0)
 	{
-		ft_tostr(b, ft_tochar(n % 10));
+		result[i-1] = ft_tochar(n % 10);
 		n /= 10;
-		ft_strcat(result, b);
+		i--;
 	}
-	if (sign == '-')
-		ft_strcat(result, "-");
-	sign = ' ';
-	return (ft_strrev(result));
+//	if (sign == '-')
+//		result = ft_strcat("-", result);
+	return (result);
 }
