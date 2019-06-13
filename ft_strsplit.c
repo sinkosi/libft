@@ -6,12 +6,12 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 14:55:29 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/12 09:00:05 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/13 13:57:21 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/*
 static int	checkchr(char a, char c)
 {
 	if (a == c)
@@ -62,5 +62,5 @@ char	**ft_strsplit(char const *s, char c)
 	
 	//The next aim of this, is to put it into a table.
 	//This needs a two-point variable 
-/*	}	
+	}	
 }*/

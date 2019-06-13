@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:12:08 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/10 15:52:34 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/13 15:39:54 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,9 @@ int	main(void)
 /*	char chris[2];
 	ft_tostr(chris, c);
 	ft_putstr(chris);*/
+	char const *trim_me = "\n\n\n\n\t  A long string \n\n\n\n";
+	char *trimmed;
+	trimmed = ft_strtrim(trim_me);
+	ft_putstr(trimmed);
 	return (0);
 }

@@ -6,51 +6,58 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 13:14:31 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/11 10:59:29 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/13 15:46:09 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	check(char c)
+static size_t	ft_check(char const *c)
 {
-	if (c == ' ' || c == '\n' || c == '\t')
-		return (1);
-	else
-		return (0);
+	size_t	i;
+
+	i = 0;
+	while ((c[i] == ' ' || c[i] == '\n' || c[i] == '\t') && c[i] != '\0')
+		i++;
+	return (i);
 }
 
-char	*ft_strtrim(char const *s)
+static size_t	ft_rcheck(char const *c)
+{
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	j = ft_strlen(c) - 1;
+	while (c[j] == ' ' || c[j] == '\n' || c[j] == '\t')
+	{
+		j--;
+		i++;
+	}
+	return (i);
+}
+
+char			*ft_strtrim(char const *s)
 {
 	size_t	i;
 	size_t	j;
 	size_t	k;
-	char	*a;
+	char	*str;
 
 	i = ft_strlen(s);
 	j = 0;
 	k = 0;
-	while (check(s[j] == 1) && s[j] != '\0')
-		j++;
+	j = ft_check(s);
+	if (s == NULL)
+		return (NULL);
 	if (j == i)
 	{
 		return ("");
 	}
-	while (check(s[i] == 1))
-	{
-		i--;
-		k++;
-	}
-	i = (k + j);
-	a = ft_strnew(i);
-	i = 0;
-	if (a == NULL)
+	k = ft_rcheck(s);
+	str = ft_strnew(i - j - k);
+	if (str == NULL)
 		return (NULL);
-	while ((i + j) < (ft_strlen(s) - k))
-	{
-		a[i] = s[j];
-		i++;
-	}
-	a[i] = '\0';
-	return (a);
+	str = ft_strsub(s, j, (i - j - k));
+	return (str);
 }
