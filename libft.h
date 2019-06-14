@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/14 10:43:44 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/14 12:35:49 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ int				ft_isgraph(int c);
 int				ft_isprint(int c);
 
 /*
-** FT_ISXDIGIT - Checks input and references as to whether it is a hexadecimal
+** FT_ISXDIGIT - Checks input and references as to whether it's a hexadecimal
 ** digit i.e	0 1 2 3 4 5 6 7 8 9 A B C D E F
 ** 								    a b c d e f
 */
@@ -104,46 +104,46 @@ int				ft_isxdigit(int c);
 
 /*
 ** FT_ISIMAX - This function will take an integer as an argument and return 1
-** if the integer is greater than or equal to 2147483647. It will return 0, if it
-** less
+** if the integer is greater than or equal to 2147483647. It will return 0,
+** if it less
 */
 int				ft_isimax(int n);
 
 /*
 ** FT_ISIMIN - This function will take an integer as an argument and return 1
-** if the integer is less than or equal to -2147483648. It will return 0, if it
-** is more.
+** if the integer is less than or equal to -2147483648. It will return 0, if
+** it is more.
 */
 int				ft_isimin(int n);
 
 /*
-** FT_TOUPPER - This function coverts a lowercase letter to an uppercase letter.
-** The function will return the uppercase letter if it is successful, or the
-** original input if it fails.
+** FT_TOUPPER - This function coverts a lowercase letter to an uppercase let-
+** ter. The function will return the uppercase letter if it is successful,
+** or the original input if it fails.
 */
 int				ft_toupper(int c);
 
 /*
-** FT_TOLOWER - This function converts an uppercase letter to a lowercase letter.
-** The function will return the lowercase letter if it is successful, or the
-** original input if it fails.
+** FT_TOLOWER - This function converts an uppercase letter to a lowercase let-
+** ter. The function will return the lowercase letter if it is successful,
+** or the original input if it fails.
 */
 int				ft_tolower(int c);
 
 /*
-** FT_STRCPY - This function copies the source string and applies it to a 
+** FT_STRCPY - This function copies the source string and applies it to a
 ** destination string, including the '\0' terminator char.
 */
 char			*ft_strcpy(char *dst, const char *src);
 
 /*
 ** FT_STRNCPY - This function copies at most len characters from src to dst.
-** If src is less than len char long, the remainder of dst is filled with 
+** If src is less than len char long, the remainder of dst is filled with
 ** '\0' characters. Otherwise dst is not determined.
 */
 char			*ft_strncpy(char *dst, const char *src, size_t len);
 
-/* 
+/*
 ** FT_STRCMP - This function compares characters in a string lexicographically
 ** The function returns 0 if the strings are equal, and non-zero if they are
 ** not equal.
@@ -203,7 +203,7 @@ char			*ft_strstr(const char *haystack, const char *needle);
 /*
 ** FT_STRNSTR - This function locates the first occurrence of the string
 ** 'needle' in the string' haystack up to n characters. It returns hay-
-** stack if needle empty. If no needle is found it returns NULL, if 
+** stack if needle empty. If no needle is found it returns NULL, if
 ** found it will return a pointer to the occurence of needle.
 */
 char			*ft_strnstr(const char *haystack, const char *needle,
@@ -252,7 +252,7 @@ void			*ft_memcpy(void *dst, const void *src, size_t n);
 void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
 
 /*
-**FT_MEMSIZE - This function will take a parameter as an argument and 
+** FT_MEMSIZE - This function will take a parameter as an argument and
 ** return its allocated bytes as an unsigned int.
 */
 unsigned int	ft_memsize(void *s1);
@@ -263,10 +263,10 @@ unsigned int	ft_memsize(void *s1);
 ** that s1 will have the value of s2, and s2 will have the value of s1.
 */
 void			ft_memswap(void *s1, void *s2);
- 
+
 /*
 ** FT_MEMMOVE - This function will copy a byte string. It takes len bytes
-** from src to dst. The strings may overlap. The function returns the 
+** from src to dst. The strings may overlap. The function returns the
 ** original value of dst.
 */
 void			*ft_memmove(void *dst, const void *src, size_t len);
@@ -285,11 +285,13 @@ void			*ft_memchr(const void *s, int c, size_t n);
 */
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 
-/* ************************************************************************** */
-/*                                                                            */
-/*								  PART TWO									  */
-/*                                                                            */
-/* ************************************************************************** */
+/*
+** ************************************************************************ *
+**                                                                          *
+**								  PART TWO								    *
+**                                                                          *
+** ************************************************************************ *
+*/
 
 /*
 ** FT_MEMALLOC - This function allocates with malloc and returns a 'fresh'
@@ -305,14 +307,15 @@ void			*ft_memalloc(size_t size);
 */
 void			ft_memdel(void **ap);
 
-/*FT_STRNEW - This function allocates with malloc and returns a 'fresh'
+/*
+** FT_STRNEW - This function allocates with malloc and returns a 'fresh'
 ** string ending with '\0'. Each character of the string is intialised
-** at '\0'. If the allocation fails the function returns NULL. 
+** at '\0'. If the allocation fails the function returns NULL.
 */
 char			*ft_strnew(size_t size);
 
 /*
-** FT_STRDEL - This function takes as a parameter the address of a 
+** FT_STRDEL - This function takes as a parameter the address of a
 ** strinf that needs to be freed with free, then sets the pointer
 ** to NULL.
 */
@@ -340,7 +343,7 @@ void			ft_striter(char *s, void (*f)(char *));
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 /*
-** FT_STRMAP - This function applies the function f to each 
+** FT_STRMAP - This function applies the function f to each
 ** character given as argument to create a 'fresh' new string (with
 ** malloc) resulting from the successive applications of f.
 */
@@ -397,14 +400,14 @@ char			*ft_strtrim(char const *s);
 
 /*
 ** FT_STRSPLIT - This function allocates (with malloc) and returns an
-** array of 'fresh' strings (all ending with '\0', including the 
+** array of 'fresh' strings (all ending with '\0', including the
 ** array itself) obtained by splitting s using the character c as a
 ** delimiter. If the allocation fails the function returns NULL.
 */
 char			**ft_strsplit(char const *s, char c);
 
 /*
-** FT_TOCHAR - This function will take an integer as an argument and 
+** FT_TOCHAR - This function will take an integer as an argument and
 ** return it as a char.
 */
 char			ft_tochar(int n);
@@ -447,9 +450,9 @@ void			ft_putchar(char c);
 void			ft_putstr(const char *s);
 
 /*
-** FT_PUTENDL - This function will print a string to the standard output 
+** FT_PUTENDL - This function will print a string to the standard output
 ** followed by a newline char. It is limited by the '\0' terminator to show
-** the end of the char string. 
+** the end of the char string.
 */
 void			ft_putendl(const char *s);
 
@@ -460,8 +463,8 @@ void			ft_putendl(const char *s);
 void			ft_putnbr(int n);
 
 /*
-** FT_PUTCHAR_FD - This function will output the char c to the file descriptor
-** fd.
+** FT_PUTCHAR_FD - This function will output the char c to the file
+** descriptor fd.
 */
 void			ft_putchar_fd(char c, int fd);
 
@@ -483,11 +486,13 @@ void			ft_putendl_fd(const char *s, int fd);
 */
 void			ft_putnbr_fd(int n, int fd);
 
-/* ************************************************************************** */
-/*                                                                            */
-/*								  BONUS PART								  */
-/*                                                                            */
-/* ************************************************************************** */
+/*
+** ************************************************************************** *
+**                                                                            *
+**								  BONUS PART								  *
+**                                                                            *
+** ************************************************************************** *
+*/
 
 /*
 **			THIS PART IS ABOUT LINKED LISTS (STRUCTS)
@@ -502,7 +507,7 @@ void			ft_putnbr_fd(int n, int fd);
 
 /*
 ** content size	-	The size of data stored. The void * type doesn't allow you
-**				to know the size of the pointed data, as a consequence, it is 
+**				to know the size of the pointed data, as a consequence, it is
 **				necessary to save its size. For instance, the size of the
 **				string '42' is 3 bytes and the 32bits integer 42 has a size of
 **				4 bytes.
@@ -514,23 +519,24 @@ void			ft_putnbr_fd(int n, int fd);
 
 /*
 ** FT_LSTNEW - Allocates (with malloc) and returns a 'fresh' link. The variables
-**			'content' and 'content_size' of the new link are initialised by 'copy' of
-**			the parameters of the function. If the parameter 'content' is nul, the
-**			variable content is initialised to NULL and the variable 'content_size'
-**			is initialised to 0 even if the parameter 'content_size' isn't. The
-**			variable 'next' is initialised to NULL. If the allocation fails, the
-**			function returns NULL.
+**			'content' and 'content_size' of the new link are initialised by
+**			'copy' of the parameters of the function. If the parameter 'content'
+**			is nul, the	variable content is initialised to NULL and the variable
+**			'content_size' is initialised to 0 even if the parameter
+**			'content_size' isn't. The variable 'next' is initialised to NULL. If
+**			the allocation fails, the function returns NULL.
 */
-t_list		*ft_lstnew(void const *content, size_t content_size);
+t_list			*ft_lstnew(void const *content, size_t content_size);
 
 /*
-** FT_LSTDELONE - Takes as a parameter a link's pointer address and frees the memory
-**			of the link's content using the function 'del' given as a parameter, then
-**			frees the link's memory using 'free'. The memory of 'next' must not be
-**			freed under any circumstance. Finally, the pointer to the link that was
-**			just freed must be set to NULL (read ft_memdel).
+** FT_LSTDELONE - Takes as a parameter a link's pointer address and frees the
+**			memory of the link's content using the function 'del' given as a
+**			parameter, then	frees the link's memory using 'free'. The memory of
+**			'next' must not be freed under any circumstance. Finally, the
+**			pointer to the link that was just freed must be set to NULL
+**			(read ft_memdel).
 */
-void		ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void			ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 
 /*
 ** FT_LSTDEL - Takes as a parameter the address of a pointer to a link and frees
@@ -538,29 +544,30 @@ void		ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 **			functions 'del' and 'free'. Finally the pointer to the link that was
 **			just freed must be set to NULL. (read ft_memdel).
 */
-void		ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 
 /*
-** FT_LSTADD - This function adds the element 'new' and the beginnning of the list.
-**			The function takes the address of a pointer as a parameter, the pointer
-**			points to the first link of a list. The second parameter is the link to
-**			add at the beginning of the list.
+** FT_LSTADD - This function adds the element 'new' and the beginnning of the
+**			list. The function takes the address of a pointer as a parameter,
+**			the pointer points to the first link of a list. The second parameter
+**			is the link to add at the beginning of the list.
 */
-void		ft_lstadd(t_list **alst, t_list *new);
+void			ft_lstadd(t_list **alst, t_list *new);
 
 /*
-** FT_LSTITER - This function iterates the list 'lst' and applies the function '(f)'
-**			to each link. A pointer to the first link is taken as the first parameter.
-**			The address of a function to apply to each link of a list is taken as a
-**			second parameter.
+** FT_LSTITER - This function iterates the list 'lst' and applies the function
+**			'(f)' to each link. A pointer to the first link is taken as the
+**			first parameter. The address of a function to apply to each link of
+**			a list is taken as a second parameter.
 */
-void		ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 
 /*
-** FT_LSTMAP - This function iterates a lst and applies the function '(f)' to each link
-**			to create a 'fresh' list (using malloc) as result from the successive
-**			applications of '(f)'. If the allocation fails, the function returns NULL.
+** FT_LSTMAP - This function iterates a lst and applies the function '(f)' to
+**			each link to create a 'fresh' list (using malloc) as result from the
+**			successive applications of '(f)'. If the allocation fails,
+**			the function returns NULL.
 */
-t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 #endif
