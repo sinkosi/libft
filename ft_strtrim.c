@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 13:14:31 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/13 15:46:09 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/14 09:03:55 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,12 @@ char			*ft_strtrim(char const *s)
 	size_t	k;
 	char	*str;
 
+	if (s == NULL)
+		return (NULL);
 	i = ft_strlen(s);
 	j = 0;
 	k = 0;
 	j = ft_check(s);
-	if (s == NULL)
-		return (NULL);
 	if (j == i)
 	{
 		return ("");

@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 13:13:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/13 14:49:36 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/14 09:01:53 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	i;
 	char	*str;
 
-	i = (ft_strlen(s1) + ft_strlen(s2));
-	str = ft_strnew(i);
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
+	i = (ft_strlen(s1) + ft_strlen(s2));
+	str = ft_strnew(i);
 	if (s1 == '\0')
 		return ((char *)s2);
 	else if (s2 == '\0')
