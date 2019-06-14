@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 11:36:22 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/14 10:03:09 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/14 14:41:20 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ static char	chksgn(int n)
 	return (sign);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	size_t	i;
 	char	*result;
 	char	sign;
 	unsigned int num;
-	
+
 	i = ft_numlen(n);
 	result = ft_strnew(i);
 	if (result == NULL)

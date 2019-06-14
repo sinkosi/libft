@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/14 12:35:49 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/14 16:08:25 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -399,12 +399,21 @@ char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s);
 
 /*
+** FT_STRLTRIM - This function allocates (with malloc) and returns a
+** copy of the string given as argument without a char of choice at
+** the beginning or at the end of the string. If no char is found at
+** the beginning or end. The function returns a copy of s. If the
+** allocation fails, the function returns NULL.
+*/
+char			*ft_strltrim(char const *s, char c);
+
+/*
 ** FT_STRSPLIT - This function allocates (with malloc) and returns an
 ** array of 'fresh' strings (all ending with '\0', including the
 ** array itself) obtained by splitting s using the character c as a
 ** delimiter. If the allocation fails the function returns NULL.
 */
-char			**ft_strsplit(char const *s, char c);
+char			*ft_strsplit(char const *s, char c);
 
 /*
 ** FT_TOCHAR - This function will take an integer as an argument and

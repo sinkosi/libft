@@ -6,33 +6,16 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 16:56:08 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/23 08:07:37 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/14 14:37:45 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
 #include "libft.h"
 
-/*
-int	ft_islower(int c)
-{
-	if (c >= 97 && c <= 122)
-		return (1);
-	else
-		return (0);
-}
-
-int	ft_isupper(int c)
-{
-	if (c >= 65 && c <= 90)
-		return (1);
-	else
-		return (0);
-}
-*/
 void	test_01(char a)
 {
-	if(ft_islower(a))
+	if (ft_islower(a))
 	{
 		ft_putchar(a);
 		ft_putstr(" is lowercase\n");
@@ -40,7 +23,7 @@ void	test_01(char a)
 		ft_putchar(ft_toupper(a));
 		ft_putchar('\n');
 	}
-	if(ft_isupper(a))
+	if (ft_isupper(a))
 	{
 		ft_putchar(a);
 		ft_putstr(" is uppercase\n");
@@ -52,22 +35,22 @@ void	test_01(char a)
 
 void	test_02(char a)
 {
-	if(ft_isalnum(a))
+	if (ft_isalnum(a))
 	{
 		ft_putchar(a);
 		ft_putstr(" is the char, you have entered. It is alphanumeric\n");
 	}
-	if(ft_isalpha(a))
+	if (ft_isalpha(a))
 	{
 		ft_putchar(a);
 		ft_putstr(" is the char, you have entered. It is a letter of the alphabet.\n");
 	}
-	if(ft_isdigit(a))
+	if (ft_isdigit(a))
 	{
 		ft_putchar(a);
 		ft_putstr(" is the char, you have entered. It is a digit.\n");
 	}
-	if(ft_isxdigit(a))
+	if (ft_isxdigit(a))
 	{
 		ft_putchar(a);
 		ft_putstr(" is the char you have entered. It is a HEX digit.\n\n");
