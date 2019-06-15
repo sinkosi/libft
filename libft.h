@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/14 16:08:25 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/15 15:10:25 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -413,7 +413,7 @@ char			*ft_strltrim(char const *s, char c);
 ** array itself) obtained by splitting s using the character c as a
 ** delimiter. If the allocation fails the function returns NULL.
 */
-char			*ft_strsplit(char const *s, char c);
+char			**ft_strsplit(char const *s, char c);
 
 /*
 ** FT_TOCHAR - This function will take an integer as an argument and

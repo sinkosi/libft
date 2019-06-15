@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:12:08 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/14 16:01:43 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/15 15:18:13 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ int	main(void)
 	char *ltrimmed;
 	ltrimmed = ft_strltrim(ltrim, '*');
 	ft_putendl(ltrimmed);
-	ft_putendl(ft_strsplit(ltrim, '*'));
+	char **table;
+	table = ft_strsplit("THIS IS A ** SENT*** ENCE ** THAT ** S", '*');
 	return (0);
 }

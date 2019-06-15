@@ -164,7 +164,7 @@ EXTRAS	= -I. -c
 #This function only runs if the (OBJ) files exist and \
 	are updated at runtime.
 $(NAME)	: $(OBJ)
-		$(CC) $(CCFLAG) $(EXTRAS) $(SRC)
+		$(CC) $(CCFLAG) $(SRC)
 		ar rc $(NAME) $(OBJ) libft.h 
 		ranlib $(NAME)
 
