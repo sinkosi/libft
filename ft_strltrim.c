@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 13:14:31 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/14 15:47:58 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/18 09:39:01 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static size_t	ft_rcheck(char const *s, char c)
 
 	i = 0;
 	j = ft_strlen(s) - 1;
-	while (s[i] == c && j >= 0)
+	while (s[j] == c && j >= 0)
 	{
 		j--;
 		i++;
