@@ -6,53 +6,38 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 11:36:22 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/14 14:41:20 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/19 14:47:36 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	chksgn(int n)
+char			*ft_itoa(int nbr)
 {
-	char	sign;
+	char			*str;
+	unsigned int	nb;
+	unsigned int	index;
+	unsigned int	size;
 
-	sign = ' ';
-	if (n < 0)
-		sign = '-';
-	return (sign);
-}
-
-char		*ft_itoa(int n)
-{
-	size_t	i;
-	char	*result;
-	char	sign;
-	unsigned int num;
-
-	i = ft_numlen(n);
-	result = ft_strnew(i);
-	if (result == NULL)
+	if (nbr < 0)
+		nb = (unsigned int)(nbr * -1);
+	else
+		nb = (unsigned int)nbr;
+	size = (unsigned int)ft_numlen(nb);
+	index = 0;
+	if (!(str = (char*)malloc(sizeof(char) * (size + 1 + (nbr < 0 ? 1 : 0)))))
 		return (NULL);
-	if (n == 0)
-		return ("0");
-	result[i] = '\0';
-	if (ft_isimin(n) == 1)
-		return (ft_strcpy(result, "-2147483648"));
-	/*if (n < 0)
+	if (ft_isimin(nbr) == 1)
+		return (ft_strcpy(str, "-2147483648"));
+	if (nbr < 0 && (str[index] = '-'))
+		size++;
+	index = size - 1;
+	while (nb >= 10)
 	{
-		n *= -1;
-		sign = '-';
-	}*/
-	sign = chksgn(n);
-	num = (unsigned int)n;
-	while (num > 0)
-	{
-		result[i - 1] = ft_tochar(num % 10);
-		num /= 10;
-		i--;
+		str[index--] = ft_tochar(nb % 10);
+		nb /= 10;
 	}
-	if (sign == '-')
-		result[0] = '-';
-	sign = ' ';
-	return (result);
+	str[index] = (char)(nb % 10 + 48);
+	str[size] = '\0';
+	return (str);
 }
