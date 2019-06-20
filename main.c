@@ -56,7 +56,12 @@ int	main(void)
 	ltrimmed = ft_strltrim(ltrim, '*');
 	ft_putendl(ltrimmed);
 	char **table;
-	table = ft_strsplit(ltrim, '*');
-		//("THIS IS A ** SENT*** ENCE ** THAT **", '*');
+	table = ft_strsplit("THIS IS A ** SENT*** ENCE ** THAT **", '*');
+	int	z = 0;
+	while (table [z] != NULL)
+	{
+		ft_putendl(table[z]);
+		z++;
+	}
 	return (0);
 }

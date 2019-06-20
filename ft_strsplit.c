@@ -6,24 +6,29 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 14:55:29 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/19 13:40:42 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/20 10:29:33 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_numwrds(char const *s, char c)
+static size_t	ft_numwrds(char const *s, char c)
 {
 	size_t	i;
 	size_t	control;
 
-	i = 1;
+	i = 0;
 	control = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c && s[i - 1] != c)
+		while (s[i] && s[i] == c)
+			i++;
+		if (s[i])
+		{
+			while (s[i] && s[i] != c)
+				i++;
 			control++;
-		i++;
+		}
 	}
 	return (control);
 }
@@ -39,6 +44,9 @@ char	**ft_strsplit(char const *s, char c)
 		return (NULL);
 	i = 0;
 	k = 0;
+	/*ft_putchar('\n');
+	ft_putnbr(ft_numwrds(s, c));
+	ft_putchar('\n');*/
 	ptopntr = (char **)malloc(sizeof(char *) * (ft_numwrds(s, c) + 1));
 	if (ptopntr == NULL)
 		return (NULL);
@@ -51,10 +59,18 @@ char	**ft_strsplit(char const *s, char c)
 			j = i;
 			while (s[i] != '\0' && s[i] != c)
 				i++;
-			ptopntr[k] = ft_strsub(s, j, i -j);
+			if (s[i] == '\0')
+				i++;
+			ptopntr[k] = ft_strsub(s, j, i - j);
 			k++;
 		}
 	}
 	ptopntr[k] = NULL;
+/*	k = 0;
+	while (ptopntr[k] != NULL)
+	{
+		ft_putendl(ptopntr[k]);
+		k++;
+	}*/
 	return (ptopntr);
 }
