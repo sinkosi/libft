@@ -6,13 +6,14 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 17:03:05 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/11 15:13:34 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/21 14:44:45 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
+
 void	ft_lstadd(t_list **alst, t_list *new)
 {
-
-}*/
+	*new->next = **alst;
+	**alst = *new;
+}

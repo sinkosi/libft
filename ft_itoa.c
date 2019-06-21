@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 11:36:22 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/20 15:16:52 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/21 15:17:59 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,27 @@
 
 char			*ft_itoa(int nbr)
 {
-	char			*str;
-	unsigned int	nb;
-	unsigned int	index;
-	unsigned int	size;
+	char		*str;
+	size_t		len;
 
-	if (nbr < 0)
-		nb = (unsigned int)(nbr * -1);
-	else
-		nb = (unsigned int)nbr;
-	size = (unsigned int)ft_numlen(nbr);
-	index = 0;
-	if (!(str = (char*)malloc(sizeof(char) * (size + 1))))// + (nbr < 0 ? 1 : 0)))))
+	len = ft_numlen(nbr);
+	if (!(str = (char*)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	if (ft_isimin(nbr) == 1)
 		return (ft_strcpy(str, "-2147483648"));
-	if (nbr < 0 && (str[index] = '-'))
-		size++;
-	index = size - 1;
-	while (nb >= 10)
+	str[len] = '\0';
+	if (nbr < 0)
 	{
-		str[index--] = ft_tochar(nb % 10);
-		nb /= 10;
+		str[0] = '-';
+		nbr *= -1;
 	}
-	str[index] = ft_tochar(nb % 10);
-	str[size] = '\0';
+	if (nbr == 0)
+		str[0] = '0';
+	while (nbr > 0 && len >= 0)
+	{
+		str[len - 1] = ft_tochar(nbr % 10);
+		nbr /= 10;
+		len--;
+	}
 	return (str);
 }

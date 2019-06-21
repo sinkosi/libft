@@ -69,10 +69,13 @@ SRC		=	ft_memset.c		\
 		  ft_putstr_fd.c	\
 		  ft_putendl_fd.c	\
 		  ft_putnbr_fd.c	\
+		  ft_lstadd.c		\
+		  ft_str_is_lowercase.c \
+		  ft_str_is_numeric.c	\
+		  ft_str_is_uppercase.c	\
 		  test.c			\
 		  main.c			\
 		  #FILES WITH NO NORM \
-		  FT_ATOI	\
 		  FT_ITOA	\
 		  FT_STRTRIM	\
 		  FT_STRSPLIT	\
@@ -149,6 +152,7 @@ OBJ		= ft_memset.o		\
 		  ft_putstr_fd.o	\
 		  ft_putendl_fd.o	\
 		  ft_putnbr_fd.o	\
+		  ft_lstadd.o		\
 		  test.o			\
 	
 

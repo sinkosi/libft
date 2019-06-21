@@ -6,13 +6,15 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 15:18:47 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/11 15:40:37 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/21 15:28:28 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
-{
 
-}*/
+/*
+**t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+**{
+**
+**}
+*/

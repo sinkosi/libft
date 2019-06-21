@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 12:51:43 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/12 13:21:59 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/21 14:40:16 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		return (0);
 	if (s1 > s2)
 	{
-		while (len--)
+		while (len != '\0')
 		{
+			len--;
 			s1[len] = s2[len];
 		}
 	}

@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/15 15:10:25 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/21 16:57:55 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -578,5 +578,19 @@ void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 **			the function returns NULL.
 */
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+/*
+** ************************************************************************** *
+**                                                                            *
+**								CUSTOM FUNCTIONS							  *
+**                                                                            *
+** ************************************************************************** *
+*/
+
+int				ft_str_is_lowercase(char *str);
+
+int				ft_str_is_numeric(char *str);
+
+int				ft_str_is_uppercase(char *str);
 
 #endif
