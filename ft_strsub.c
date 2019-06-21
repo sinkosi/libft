@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 13:14:51 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/18 12:01:58 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/21 11:50:51 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,12 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	unsigned int	i;
 	char			*a;
 
-	i = 0;
 	if (s == NULL)
 		return (NULL);
 	a = ft_strnew(len);
-	if (start > len)
-		return (NULL);
 	if (a == NULL)
 		return (NULL);
+	i = 0;
 	while (i < len)
 	{
 		a[i] = s[i + start];

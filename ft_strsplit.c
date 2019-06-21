@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 14:55:29 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/20 10:29:33 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/21 11:46:17 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static size_t	ft_numwrds(char const *s, char c)
 {
-	size_t	i;
-	size_t	control;
+	size_t		i;
+	size_t		control;
 
 	i = 0;
 	control = 0;
@@ -33,22 +33,18 @@ static size_t	ft_numwrds(char const *s, char c)
 	return (control);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
-	size_t	i;
-	size_t	j;
-	size_t	k;
-	char	**ptopntr;
+	size_t		i;
+	size_t		j;
+	size_t		k;
+	char		**ptopntr;
 
 	if (s == NULL)
 		return (NULL);
 	i = 0;
 	k = 0;
-	/*ft_putchar('\n');
-	ft_putnbr(ft_numwrds(s, c));
-	ft_putchar('\n');*/
-	ptopntr = (char **)malloc(sizeof(char *) * (ft_numwrds(s, c) + 1));
-	if (ptopntr == NULL)
+	if (!(ptopntr = (char **)malloc(sizeof(char *) * (ft_numwrds(s, c) + 1))))
 		return (NULL);
 	while (s[i] != '\0')
 	{
@@ -59,18 +55,9 @@ char	**ft_strsplit(char const *s, char c)
 			j = i;
 			while (s[i] != '\0' && s[i] != c)
 				i++;
-			if (s[i] == '\0')
-				i++;
-			ptopntr[k] = ft_strsub(s, j, i - j);
-			k++;
+			ptopntr[k++] = ft_strsub(s, j, i - j);
 		}
 	}
 	ptopntr[k] = NULL;
-/*	k = 0;
-	while (ptopntr[k] != NULL)
-	{
-		ft_putendl(ptopntr[k]);
-		k++;
-	}*/
 	return (ptopntr);
 }
