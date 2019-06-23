@@ -70,9 +70,38 @@ SRC		=	ft_memset.c		\
 		  ft_putendl_fd.c	\
 		  ft_putnbr_fd.c	\
 		  ft_lstadd.c		\
+		  ft_iscntrl.c		\
 		  ft_str_is_lowercase.c \
-		  ft_str_is_numeric.c	\
 		  ft_str_is_uppercase.c	\
+		  ft_str_is_alpha.c	\
+		  ft_str_is_numeric.c	\
+		  ft_str_is_xnumeric.c	\
+		  ft_str_is_alnum.c	\
+		  ft_str_is_printable.c	\
+		  ft_strlowcase.c	\
+		  ft_strupcase.c	\
+		  ft_strcapitalize.c	\
+		  ft_strlcpy.c		\
+		  ft_strcasecmp.c	\
+		  ft_strncasecmp.c	\
+		  ft_strcasestr.c	\
+		  ft_strtok.c		\
+		  ft_swap.c		\
+		  ft_div_mod.c		\
+		  ft_ultimate_div_mod.c	\
+		  ft_iterative_factorial.c	\
+		  ft_recursive_factorial.c	\
+		  ft_iterative_power.c	\
+		  ft_recursive_power.c	\
+		  ft_fibonacci.c	\
+		  ft_sqrt.c		\
+		  ft_is_prime.c		\
+		  ft_find_next_prime.c	\
+		  ft_numlen_base.c	\
+		  ft_itoa_base.c	\
+		  ft_putnbr_base.c	\
+		  ft_atoi_base.c	\
+		  ft_arraydup.c		\
 		  test.c			\
 		  main.c			\
 		  #FILES WITH NO NORM \
@@ -143,7 +172,7 @@ OBJ		= ft_memset.o		\
 		  ft_strsplit.o		\
 		  ft_numlen.o		\
 		  ft_strrev.o		\
-		  ft_itoa.o			\
+		  ft_itoa.o		\
 		  ft_putchar.o		\
 		  ft_putstr.o		\
 		  ft_putendl.o		\
@@ -153,6 +182,38 @@ OBJ		= ft_memset.o		\
 		  ft_putendl_fd.o	\
 		  ft_putnbr_fd.o	\
 		  ft_lstadd.o		\
+		  ft_iscntrl.o		\
+		  ft_str_is_lowercase.o \
+		  ft_str_is_uppercase.o	\
+		  ft_str_is_alpha.o	\
+		  ft_str_is_numeric.o	\
+		  ft_str_is_xnumeric.o	\
+		  ft_str_is_alnum.o	\
+		  ft_str_is_printable.o	\
+		  ft_strlowcase.o	\
+		  ft_strupcase.o	\
+		  ft_strcapitalize.o	\
+		  ft_strlcpy.o		\
+		  ft_strcasecmp.o	\
+		  ft_strncasecmp.o	\
+		  ft_strcasestr.o	\
+		  ft_strtok.o		\
+		  ft_swap.o		\
+		  ft_div_mod.o		\
+		  ft_ultimate_div_mod.o	\
+		  ft_iterative_factorial.o	\
+		  ft_recursive_factorial.o	\
+		  ft_iterative_power.o	\
+		  ft_recursive_power.o	\
+		  ft_fibonacci.o	\
+		  ft_sqrt.o		\
+		  ft_is_prime.o		\
+		  ft_find_next_prime.o	\
+		  ft_numlen_base.o	\
+		  ft_itoa_base.o	\
+		  ft_putnbr_base.o	\
+		  ft_atoi_base.o	\
+		  ft_arraydup.o		\
 		  test.o			\
 	
 

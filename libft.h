@@ -442,7 +442,9 @@ size_t			ft_numlen(int n);
 
 /*
 ** FT_ITOA - This function will allocate and return a fresh string ending
-** with '\0'.
+** with '\0'. The function returns a string equivalent of the parameter ' n',
+**	given as argument. It supports negative numbers. If allocation fails, it
+**	returns NULL.
 */
 char			*ft_itoa(int n);
 
@@ -582,15 +584,289 @@ t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 /*
 ** ************************************************************************** *
 **                                                                            *
-**								CUSTOM FUNCTIONS							  *
+**								EXTRA FUNCTIONS							  *
 **                                                                            *
 ** ************************************************************************** *
 */
 
+/*
+** FT_ISCNTRL - This function checks whether a character is a control character
+**		that cannot be printed. It is the opposite of FT_ISPRINT. It
+**		returns a 1 if it is true and a 0 if it is false.
+*/
+int			ft_iscntrl(int c);
+
+/*
+** FT_STR_IS_LOWERCASE - This function checks lexicographically, each character
+**		in a given string to determine if it is lowercase. If the entire
+**		string is lowercase, the function returns a 1. If one char is
+**		not a lowercase letter. It will return a 0.
+*/
 int				ft_str_is_lowercase(char *str);
 
+/*
+** FT_STR_IS_UPPERCASE - This function checks lexicographically, each character
+**		in a given string to determine if it is uppercase. If the entire
+**		string is uppercase, the function will return a 1. If one char
+**		is not uppercase, the function returns a 0.
+*/
+int				ft_str_is_uppercase(char *str);
+
+/*
+** FT_STR_IS_ALPHA - This function checks lexicographically if each current in
+**		a given string is a letter of the alphabet. If the entire string
+**		is of type alpha, the function will return a 1. If it is not of
+**		type alphabet, it will return a 0.
+*/
+int				ft_str_is_alpha(char *str);
+
+/*
+** FT_STR_IS_NUMERIC - This function checks a string, one character at a time
+**		to ensure that it consists of only digits between 0 and 9. The
+**		function will return 1 if it is true. It will return 0 if the
+**		string consists of characters other than digits.
+*/
 int				ft_str_is_numeric(char *str);
 
-int				ft_str_is_uppercase(char *str);
+/*
+** FT_STR_IS_XNUMERIC - This function checks a string, one character at a time
+**		to ensure that it is a valid HEX number. The function will
+**		return a 1 if every char in a string is a valid HEX digit. If
+**		one char is not a HEX number, it will return 0.
+*/
+int				ft_str_is_xnumeric(char *str);
+
+/*
+** FT_STR_IS_ALNUM - This function checks a string, one character at a time
+**		to ensure that it consists of only aplhanumeric characters.
+**		If the string only consists of alphanumeric characters, it will
+**		return a 1. If one character is not alphanumeric, it will return
+**		a 0.
+*/
+int				ft_str_is_alnum(char *str);
+
+/*
+** FT_STR_IS_PRINTABLE - This function checks a string, one character at a time
+**		to ensure that it consists of printable characters. If the
+**		string consists of only printable characters, then it will
+**		return a 1. If one character is not printable, then it will
+**		return a 0.
+*/
+int				ft_str_is_printable(char *str);
+
+/*
+** FT_STRLOWCASE - This function takes a string as a parameter and converts the
+**		char it finds to lowercase, if it is an uppercase char. If it is
+**		not possible to do so, either it is a digit or symbol, it will
+**		iterate through to the next char until the end of the string.
+**		This function will return argument '*str'
+*/
+char				*ft_strlowcase(char *str);
+
+/*
+** FT_STRUPCASE - This function takes a str as a parameter and converts it to
+**		uppercase. It returns the string in uppercase when it is done.
+*/
+char				*ft_strupcase(char *str);
+
+/*
+** FT_STRCAPITALIZE - This function takes a string as an argument and converts
+**		the first letter to an uppercase letter. It also does this to
+**		every letter that occurs after a space. The function returns
+**		the string after modifications.
+*/
+char				*ft_strcapitalize(char *str);
+
+/*
+** FT_STRLCPY - This function copies up to 'dstsize - 1' characters from the
+**		string 'src' to 'dst', NUL-terminating the result if dstsize is
+**		not 0. The function returns the total length of the string it
+**		tried to create. For FT_STRLCPY(), this means the length of src.
+**		IF: The return value is >= dstsize, the output string has been
+**		truncated.
+*/
+size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize);
+
+/*
+** FT_STRCASECMP - This function takes two strings and compares them character
+**		by character. It will return 0 if the strings are equal and a
+**		non-zero integer if there is a difference. The function does not
+**		compare according to the case of the character.
+*/
+int				ft_strcasecmp(const char *s1, const char *s2);
+
+/*
+** FT_STRNCASECMP - This function takes two strings and compares them character
+**		by character up to n-characters. It will return 0 if the strings
+**		are equal and a non-zero integer if there is a difference. The
+**		function does not compare according to the case of the character
+*/
+int				ft_strncasecmp(const char *s1, const char *s2, size_t n);
+
+/*
+** FT_STRCASESTR - This function will find the first occurrence of the substring
+**		'needle' in the string 'haystack'. The terminating NULL-bytes
+**		are not compared. This function does not factor in case of the
+**		substring 'needle' or the string 'haystack'.
+*/
+char				*ft_strcasestr(const char *haystack, const char *needle);
+
+/*
+** FT_STRTOK - This function breaks a string into a sequence of zero or more
+**		non-empty tokens. The 'delim' argument specifies a set of bytes
+**		that delimit the tokens in the parsed string. Each call to
+**		ft_strtok() returns a pointer to a null-terminated string
+**		containing the next token. This string does not include the
+**		delimitting byte. If no more tokens are found, ft_strtok()
+**		returns NULL.
+*/
+char				*ft_strtok(char *str, const char *delim);
+
+/*
+** ************************************************************************** *
+**                                                                            *
+**								SPECIALISED USE FUNCTIONS						  *
+**                                                                            *
+** ************************************************************************** *
+*/
+
+/*
+** FT_SWAP - This function takes two integers as argument and swaps their
+**		respective values around. In this scenario, after running,
+**		int *a would be = b, and b would be = a before being changed.
+*/
+void				ft_swap(int *a, int *b);
+
+/*
+** FT_DIV_MOD - This function divides parameters a and b and stores the result
+**		in the int pointed by 'div'. It also stores the remainder of the
+**		division in the int point by 'mod'.
+*/
+void				ft_div_mod(int a, int b, int *div, int *mod);
+
+/*
+** FT_ULTIMATE_DIV_MOD - This function divides paramaters a and b. The result
+**		of this division is stored in the int pointed by a. The
+**		remainder of the division is stored in the int pointed by b.
+*/
+void				ft_ultimate_div_mod(int *a, int *b);
+
+/*
+** FT_ITERATIVE_FACTORIAL - This function finds iteratively, the factorial
+**		of a number passed to it as a parameter. If there is an error
+**		it will return 0.
+*/
+int				ft_iterative_factorial(int nb);
+
+/*
+** FT_RECURSIVE_FACTORIAL - This function finds recursively, the factorial of a
+**		number passed to it as a parameter. If there is an error, it
+**		will return 0.
+*/
+int				ft_recursive_factorial(int nb);
+
+/*
+** FT_ITERATIVE_POWER - This function returns a the value of a power applied
+**		to a number. A power lower than 0, returns 0. Overflows are not
+**		handled.
+*/
+int				ft_iterative_power(int nb, int power);
+
+/*
+** FT_RECURSIVE_POWER - This function returns a value of a power applied to a
+**		a number. A power lower than 0, returns 0. Overflows are not
+**		handled.
+*/
+int					ft_recursive_power(int nb, int power);
+
+/*
+** FT_FIBONACCI - This function returns the n-th element of the Fibonacci
+**		sequence, the first element being at the 0 index. The sequence
+**		starts as '0, 1, 1, 2....' if index is less than 0, the return
+**		value is -1.
+*/
+int					ft_fibonacci(int index);
+
+/*
+** FT_SQRT - This function will find and return the square root of a number
+**		passed to it as a parameter, if it exists. Otherwise it will
+**		return (0);
+*/
+int					ft_sqrt(int nb);
+
+/*
+** FT_ISPRIME - This function will check if a number passed to it as a parameter
+**		is a prime number. If it is a prime number, it will return (1),
+**		else it will return 0. Negative numbers return (0); 0 and 1 are
+**		also not considered to be prime numbers.
+*/
+int					ft_is_prime(unsigned int nb);
+
+/*
+** FT_FIND_NEXT_PRIME - This function will check if a number passed to it as a
+**		parameter is a prime number, if it is not. It will return the
+**		next prime number after the parameter and return its value.
+*/
+int					ft_find_next_prime(int nb);
+
+/*
+** FT_NUMLEN_BASE - This function takes an int n as an argument and returns
+** 		the length of the number of digits as a result of size_t.
+**		The function works for base 10 digits. It also works for
+**		a base >= 2 and bases <= 16.
+*/
+int					ft_numlen_base(int n, int base);
+
+/*
+**FT_ITOA_BASE - This function converts an integer value to a null-terminated
+**		string using the specified base and stores the result in a char
+**		array that is allocated using malloc. The base is expressed as a
+**		integer, from 2 to 16. The characters comprising the base are
+**		the digits from 0 to 9, followed by uppercase letter from A to F
+**		For example:
+**		base 4 would be "0123" and
+**		base 16 "0123456789ABCDEF".
+**		If base is 10 and value is negative, the resulting string is
+**		preceded with a minus sign (-). With any other base, value is
+**		always considered unsigned.
+*/
+char				*ft_itoa_base(int value, int base);
+
+/*
+** FT_PUTNBR_BASE - This function displays a number on the screen in a chosen
+**		base system. The number is given in the form of an 'int', and
+**		base in the form of a string of characters. The base-system
+**		contains all useable symbols to display that number:
+**		'0123456789 ' is used for decimal numbers
+**		'01' is used for binary.
+**		'0123456789ABCDEF' is used for a hexadecimal system.
+**		The function can handle negative numbers.
+**		Failures that cause function to print NULL.
+**		The base needs to be greater in size than 1.
+**		The base cannot have the same character twice.
+**		The base must be alphanumeric.
+*/
+void				ft_putnbr_base(int n, int base);
+
+/*
+** FT_ATOI_BASE - The function converts the string argument str (base N <= 16)
+**		to an integer (base 10) and returns it. The characters recognized
+**		in the input are: 0123456789abcdef :
+**		Those are, of course, to be trimmed according to the requested
+**		base. For example, 
+**		base 4 recognizes "0123" and 
+**		base 16 recognizes "0123456789abcdef".
+**		Uppercase letters are also recognized: "12fdb3" is the same as
+**		"12FDB3". Minus signs ('-') are interpreted only if they are the
+**		first character of the string.
+*/
+int					ft_atoi_base(const char *str, int base);
+
+/*
+** FT_ARRAYDUP - This function allocates sufficient memory for a copy of
+** the string s1, does the copy, and returns a pointer to it. If in-
+** sufficient memory is available, NULL is returned.
+*/
+char			**ft_arraydup(const char **arr1);
 
 #endif
