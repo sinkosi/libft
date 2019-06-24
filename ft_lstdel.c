@@ -12,15 +12,19 @@
 
 #include "libft.h"
 
-/*
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
 	t_list	*mylist;
 
-	while (t_list->next != NULL)
-	{
-		next = (*alst)->next;
-		ft_lstdelone((*alst)->content, (*alst)->content_size);
-		next->(*alst)->next;
-	}
-}*/
+	if (del == NULL)
+		return (NULL);
+	else
+		while (*alst != NULL)
+		{
+			mylist = (*alst)->next;
+			del(mylist->content, mylist->content_size);
+			free(mylist);
+			
+		}
+	*(alst) = NULL;
+}

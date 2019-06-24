@@ -31,7 +31,8 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	else
 	{
 		mylist->content_size = content_size;
-		ft_memcpy(mylist->content, content, content_size);
+		ft_memmove(mylist->content, content, content_size);
+		mylist->content_size = content_size
 	}
 	return (mylist);
 }
