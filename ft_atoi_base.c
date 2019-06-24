@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/24 07:57:57 by sinkosi           #+#    #+#             */
+/*   Updated: 2019/06/24 07:59:05 by sinkosi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int	ft_atoi_base(const char *str, int str_base)
+int	ft_atoi_base(const char *str, int base)
 {
 	int	i;
 	int	n;
@@ -33,5 +45,5 @@ int	ft_atoi_base(const char *str, int str_base)
 		else if ((n > 2147483647) && sign == 1)
 			return (-1);
 	}
-	return (result * sign);
+	return (n * sign);
 }

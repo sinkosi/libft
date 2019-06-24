@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/21 16:57:55 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/24 13:39:39 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -405,7 +405,7 @@ char			*ft_strtrim(char const *s);
 ** the beginning or end. The function returns a copy of s. If the
 ** allocation fails, the function returns NULL.
 */
-char			*ft_strltrim(char const *s, char c);
+char			*ft_strtrim_delim(char const *s, char c);
 
 /*
 ** FT_STRSPLIT - This function allocates (with malloc) and returns an
@@ -509,6 +509,13 @@ void			ft_putnbr_fd(int n, int fd);
 **			THIS PART IS ABOUT LINKED LISTS (STRUCTS)
 **
 ** Below are definitions of what is contained in the struct and their purpose
+**
+**	This part would not be possible without:
+**		https://www.learn-c.org/en/Linked_lists
+**		https://www.tutorialspoint.com/cprogramming/c_typedef.htm
+**		https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/
+**			classes-and-structs/structs
+**		https://en.wikipedia.org/wiki/Struct_(C_programming_language)
 */
 
 /*
@@ -594,7 +601,7 @@ t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 **		that cannot be printed. It is the opposite of FT_ISPRINT. It
 **		returns a 1 if it is true and a 0 if it is false.
 */
-int			ft_iscntrl(int c);
+int				ft_iscntrl(int c);
 
 /*
 ** FT_STR_IS_LOWERCASE - This function checks lexicographically, each character
@@ -661,13 +668,13 @@ int				ft_str_is_printable(char *str);
 **		iterate through to the next char until the end of the string.
 **		This function will return argument '*str'
 */
-char				*ft_strlowcase(char *str);
+char			*ft_strlowcase(char *str);
 
 /*
 ** FT_STRUPCASE - This function takes a str as a parameter and converts it to
 **		uppercase. It returns the string in uppercase when it is done.
 */
-char				*ft_strupcase(char *str);
+char			*ft_strupcase(char *str);
 
 /*
 ** FT_STRCAPITALIZE - This function takes a string as an argument and converts
@@ -675,7 +682,7 @@ char				*ft_strupcase(char *str);
 **		every letter that occurs after a space. The function returns
 **		the string after modifications.
 */
-char				*ft_strcapitalize(char *str);
+char			*ft_strcapitalize(char *str);
 
 /*
 ** FT_STRLCPY - This function copies up to 'dstsize - 1' characters from the
@@ -709,7 +716,7 @@ int				ft_strncasecmp(const char *s1, const char *s2, size_t n);
 **		are not compared. This function does not factor in case of the
 **		substring 'needle' or the string 'haystack'.
 */
-char				*ft_strcasestr(const char *haystack, const char *needle);
+char			*ft_strcasestr(const char *haystack, const char *needle);
 
 /*
 ** FT_STRTOK - This function breaks a string into a sequence of zero or more
@@ -720,12 +727,12 @@ char				*ft_strcasestr(const char *haystack, const char *needle);
 **		delimitting byte. If no more tokens are found, ft_strtok()
 **		returns NULL.
 */
-char				*ft_strtok(char *str, const char *delim);
+char			*ft_strtok(char *str, const char *delim);
 
 /*
 ** ************************************************************************** *
 **                                                                            *
-**								SPECIALISED USE FUNCTIONS						  *
+**								SPECIAL USE FUNCTIONS						  *
 **                                                                            *
 ** ************************************************************************** *
 */
@@ -735,49 +742,35 @@ char				*ft_strtok(char *str, const char *delim);
 **		respective values around. In this scenario, after running,
 **		int *a would be = b, and b would be = a before being changed.
 */
-void				ft_swap(int *a, int *b);
+void			ft_swap(int *a, int *b);
 
 /*
 ** FT_DIV_MOD - This function divides parameters a and b and stores the result
 **		in the int pointed by 'div'. It also stores the remainder of the
 **		division in the int point by 'mod'.
 */
-void				ft_div_mod(int a, int b, int *div, int *mod);
+void			ft_div_mod(int a, int b, int *div, int *mod);
 
 /*
 ** FT_ULTIMATE_DIV_MOD - This function divides paramaters a and b. The result
 **		of this division is stored in the int pointed by a. The
 **		remainder of the division is stored in the int pointed by b.
 */
-void				ft_ultimate_div_mod(int *a, int *b);
+void			ft_ultimate_div_mod(int *a, int *b);
 
 /*
-** FT_ITERATIVE_FACTORIAL - This function finds iteratively, the factorial
+** FT_FACTORIAL - This function finds iteratively, the factorial
 **		of a number passed to it as a parameter. If there is an error
 **		it will return 0.
 */
-int				ft_iterative_factorial(int nb);
+int				ft_factorial(int nb);
 
 /*
-** FT_RECURSIVE_FACTORIAL - This function finds recursively, the factorial of a
-**		number passed to it as a parameter. If there is an error, it
-**		will return 0.
-*/
-int				ft_recursive_factorial(int nb);
-
-/*
-** FT_ITERATIVE_POWER - This function returns a the value of a power applied
+** FT_POWER - This function returns a the value of a power applied
 **		to a number. A power lower than 0, returns 0. Overflows are not
 **		handled.
 */
-int				ft_iterative_power(int nb, int power);
-
-/*
-** FT_RECURSIVE_POWER - This function returns a value of a power applied to a
-**		a number. A power lower than 0, returns 0. Overflows are not
-**		handled.
-*/
-int					ft_recursive_power(int nb, int power);
+int				ft_power(int nb, int power);
 
 /*
 ** FT_FIBONACCI - This function returns the n-th element of the Fibonacci
@@ -785,14 +778,14 @@ int					ft_recursive_power(int nb, int power);
 **		starts as '0, 1, 1, 2....' if index is less than 0, the return
 **		value is -1.
 */
-int					ft_fibonacci(int index);
+int				ft_fibonacci(int index);
 
 /*
 ** FT_SQRT - This function will find and return the square root of a number
 **		passed to it as a parameter, if it exists. Otherwise it will
 **		return (0);
 */
-int					ft_sqrt(int nb);
+int				ft_sqrt(int nb);
 
 /*
 ** FT_ISPRIME - This function will check if a number passed to it as a parameter
@@ -800,14 +793,14 @@ int					ft_sqrt(int nb);
 **		else it will return 0. Negative numbers return (0); 0 and 1 are
 **		also not considered to be prime numbers.
 */
-int					ft_is_prime(unsigned int nb);
+int				ft_is_prime(unsigned int nb);
 
 /*
 ** FT_FIND_NEXT_PRIME - This function will check if a number passed to it as a
 **		parameter is a prime number, if it is not. It will return the
 **		next prime number after the parameter and return its value.
 */
-int					ft_find_next_prime(int nb);
+int				ft_find_next_prime(int nb);
 
 /*
 ** FT_NUMLEN_BASE - This function takes an int n as an argument and returns
@@ -815,7 +808,7 @@ int					ft_find_next_prime(int nb);
 **		The function works for base 10 digits. It also works for
 **		a base >= 2 and bases <= 16.
 */
-int					ft_numlen_base(int n, int base);
+int				ft_numlen_base(int n, int base);
 
 /*
 **FT_ITOA_BASE - This function converts an integer value to a null-terminated
@@ -830,7 +823,7 @@ int					ft_numlen_base(int n, int base);
 **		preceded with a minus sign (-). With any other base, value is
 **		always considered unsigned.
 */
-char				*ft_itoa_base(int value, int base);
+char			*ft_itoa_base(int value, int base);
 
 /*
 ** FT_PUTNBR_BASE - This function displays a number on the screen in a chosen
@@ -846,27 +839,27 @@ char				*ft_itoa_base(int value, int base);
 **		The base cannot have the same character twice.
 **		The base must be alphanumeric.
 */
-void				ft_putnbr_base(int n, int base);
+void			ft_putnbr_base(int n, int base);
 
 /*
 ** FT_ATOI_BASE - The function converts the string argument str (base N <= 16)
 **		to an integer (base 10) and returns it. The characters recognized
 **		in the input are: 0123456789abcdef :
 **		Those are, of course, to be trimmed according to the requested
-**		base. For example, 
-**		base 4 recognizes "0123" and 
+**		base. For example,
+**		base 4 recognizes "0123" and
 **		base 16 recognizes "0123456789abcdef".
 **		Uppercase letters are also recognized: "12fdb3" is the same as
 **		"12FDB3". Minus signs ('-') are interpreted only if they are the
 **		first character of the string.
 */
-int					ft_atoi_base(const char *str, int base);
+int				ft_atoi_base(const char *str, int base);
 
 /*
 ** FT_ARRAYDUP - This function allocates sufficient memory for a copy of
 ** the string s1, does the copy, and returns a pointer to it. If in-
 ** sufficient memory is available, NULL is returned.
 */
-char			**ft_arraydup(const char **arr1);
+char			**ft_arraydup(const char **arr);
 
 #endif

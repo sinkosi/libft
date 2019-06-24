@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 17:03:05 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/21 14:44:45 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/24 14:12:03 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {
-	*new->next = **alst;
-	**alst = *new;
+	new->next = *alst;
+	*alst = new;
 }

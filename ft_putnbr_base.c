@@ -1,10 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/24 12:09:45 by sinkosi           #+#    #+#             */
+/*   Updated: 2019/06/24 12:10:58 by sinkosi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_putnbr_base(int n, int base)
 {
-	char	a;
 	char	*str;
-	int	i;
+	int		i;
 
 	str = "0123456789ABCDEF";
 	i = 0;
@@ -26,6 +37,5 @@ void	ft_putnbr_base(int n, int base)
 	if (n >= base)
 		ft_putnbr(n / base);
 	i = (n % base);
-	a = str[i];
-	ft_putchar(a);
+	ft_putchar(str[i]);
 }

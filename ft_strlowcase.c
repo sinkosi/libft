@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/24 07:44:34 by sinkosi           #+#    #+#             */
+/*   Updated: 2019/06/24 08:40:34 by sinkosi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strlowcase(char *str)
@@ -8,7 +20,7 @@ char	*ft_strlowcase(char *str)
 	while (str[i] != '\0')
 	{
 		if (ft_isupper(str[i]) == 1)
-			ft_tolower(str[i]);
+			str[i] = ft_tolower(str[i]);
 		i++;
 	}
 	return (str);

@@ -56,7 +56,7 @@ SRC		=	ft_memset.c		\
 		  ft_strsub.c		\
 		  ft_strjoin.c		\
 		  ft_strtrim.c		\
-		  ft_strltrim.c		\
+		  ft_strtrim_delim.c\
 		  ft_strsplit.c		\
 		  ft_numlen.c		\
 		  ft_strrev.c		\
@@ -69,6 +69,9 @@ SRC		=	ft_memset.c		\
 		  ft_putstr_fd.c	\
 		  ft_putendl_fd.c	\
 		  ft_putnbr_fd.c	\
+		  ft_lstnew.c		\
+		  ft_lstdelone.c	\
+		  ft_lstdel.c		\
 		  ft_lstadd.c		\
 		  ft_iscntrl.c		\
 		  ft_str_is_lowercase.c \
@@ -86,15 +89,13 @@ SRC		=	ft_memset.c		\
 		  ft_strncasecmp.c	\
 		  ft_strcasestr.c	\
 		  ft_strtok.c		\
-		  ft_swap.c		\
+		  ft_swap.c			\
 		  ft_div_mod.c		\
 		  ft_ultimate_div_mod.c	\
-		  ft_iterative_factorial.c	\
-		  ft_recursive_factorial.c	\
-		  ft_iterative_power.c	\
-		  ft_recursive_power.c	\
+		  ft_factorial.c	\
+		  ft_power.c		\
 		  ft_fibonacci.c	\
-		  ft_sqrt.c		\
+		  ft_sqrt.c			\
 		  ft_is_prime.c		\
 		  ft_find_next_prime.c	\
 		  ft_numlen_base.c	\
@@ -168,7 +169,7 @@ OBJ		= ft_memset.o		\
 		  ft_strsub.o		\
 		  ft_strjoin.o		\
 		  ft_strtrim.o		\
-		  ft_strltrim.o		\
+		  ft_strtrim_delim.o\
 		  ft_strsplit.o		\
 		  ft_numlen.o		\
 		  ft_strrev.o		\
@@ -181,6 +182,9 @@ OBJ		= ft_memset.o		\
 		  ft_putstr_fd.o	\
 		  ft_putendl_fd.o	\
 		  ft_putnbr_fd.o	\
+		  ft_lstnew.o		\
+		  ft_lstdelone.o	\
+		  ft_lstdel.o		\
 		  ft_lstadd.o		\
 		  ft_iscntrl.o		\
 		  ft_str_is_lowercase.o \
@@ -201,10 +205,8 @@ OBJ		= ft_memset.o		\
 		  ft_swap.o		\
 		  ft_div_mod.o		\
 		  ft_ultimate_div_mod.o	\
-		  ft_iterative_factorial.o	\
-		  ft_recursive_factorial.o	\
-		  ft_iterative_power.o	\
-		  ft_recursive_power.o	\
+		  ft_factorial.o	\
+		  ft_power.o	\
 		  ft_fibonacci.o	\
 		  ft_sqrt.o		\
 		  ft_is_prime.o		\
@@ -215,6 +217,7 @@ OBJ		= ft_memset.o		\
 		  ft_atoi_base.o	\
 		  ft_arraydup.o		\
 		  test.o			\
+		  main.o
 	
 
 #Chosen compiler as prescribed by WTC_
