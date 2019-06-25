@@ -73,6 +73,8 @@ SRC		=	ft_memset.c		\
 		  ft_lstdelone.c	\
 		  ft_lstdel.c		\
 		  ft_lstadd.c		\
+		  ft_lstiter.c		\
+		  ft_lstmap.c		\
 		  ft_iscntrl.c		\
 		  ft_str_is_lowercase.c \
 		  ft_str_is_uppercase.c	\
@@ -88,6 +90,8 @@ SRC		=	ft_memset.c		\
 		  ft_strcasecmp.c	\
 		  ft_strncasecmp.c	\
 		  ft_strcasestr.c	\
+		  ft_strspn.c		\
+		  ft_strcspn.c		\
 		  ft_strtok.c		\
 		  ft_swap.c			\
 		  ft_div_mod.c		\
@@ -173,7 +177,7 @@ OBJ		= ft_memset.o		\
 		  ft_strsplit.o		\
 		  ft_numlen.o		\
 		  ft_strrev.o		\
-		  ft_itoa.o		\
+		  ft_itoa.o			\
 		  ft_putchar.o		\
 		  ft_putstr.o		\
 		  ft_putendl.o		\
@@ -186,6 +190,8 @@ OBJ		= ft_memset.o		\
 		  ft_lstdelone.o	\
 		  ft_lstdel.o		\
 		  ft_lstadd.o		\
+		  ft_lstiter.o		\
+		  ft_lstmap.o		\
 		  ft_iscntrl.o		\
 		  ft_str_is_lowercase.o \
 		  ft_str_is_uppercase.o	\
@@ -201,8 +207,10 @@ OBJ		= ft_memset.o		\
 		  ft_strcasecmp.o	\
 		  ft_strncasecmp.o	\
 		  ft_strcasestr.o	\
+		  ft_strspn.o		\
+		  ft_strcspn.o		\
 		  ft_strtok.o		\
-		  ft_swap.o		\
+		  ft_swap.o			\
 		  ft_div_mod.o		\
 		  ft_ultimate_div_mod.o	\
 		  ft_factorial.o	\

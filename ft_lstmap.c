@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 15:18:47 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/21 15:28:28 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/25 16:35:49 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 		return (NULL);
 	mylist = f(lst);
 	if (mylist == NULL && lst->next == NULL)
-		return (NULL)
+		return (NULL);
 	else if (mylist != NULL && lst->next != NULL)
 		mylist->next = ft_lstmap(lst->next, f);
 	return (mylist);

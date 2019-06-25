@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/24 07:57:57 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/24 07:59:05 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/25 15:33:48 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,7 @@ int	ft_atoi_base(const char *str, int base)
 	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
 		i++;
 	if (str[i] == '-')
-	{
 		sign = -1;
-	}
 	while (str[i] == '-' || str[i] == '+')
 		i++;
 	while (str[i] != '\0' && ft_isxdigit(str[i]) == 1)

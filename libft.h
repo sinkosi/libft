@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/24 13:39:39 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/25 12:24:38 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -717,6 +717,22 @@ int				ft_strncasecmp(const char *s1, const char *s2, size_t n);
 **		substring 'needle' or the string 'haystack'.
 */
 char			*ft_strcasestr(const char *haystack, const char *needle);
+
+/*
+** FT_STRSPN - This function spans the initial part of the null-terminated str-
+**		ing '*s' as long as the characters from '*s' occur in the null_term-
+**		inated string 'charset'. The ft_strspn() function returns the number of
+**		characters spanned.
+*/
+size_t			ft_strspn(const char *s, const char *charset);
+
+/*
+** FT_STRCSPN - This function spans the initial part of the null-terminated
+**		string '*s' as long as the characters from '*s' DO NOT occur in the null
+**		terminated string 'charset'. The ft_strcspn() function returns the
+**		number of characters spanned.
+*/
+size_t			ft_strcspn(const char *s, const char *charset);
 
 /*
 ** FT_STRTOK - This function breaks a string into a sequence of zero or more

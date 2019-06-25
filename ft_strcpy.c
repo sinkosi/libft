@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:08 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/05/29 08:22:55 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/06/25 17:02:22 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strcpy(char *dst, const char *src)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (src[i])
