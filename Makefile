@@ -117,8 +117,8 @@ SRC		=	ft_memset.c		\
 		  BONUS FILES NOT ADDED OR NORM
 			
 
-#OBJ		= $(SRC:.c=.o)
-OBJ		= ft_memset.o		\
+OBJ		= $(SRC:.c=.o)
+#OBJ		= ft_memset.o		\
 		  ft_bzero.o		\
 		  ft_memcpy.o		\
 		  ft_memccpy.o		\
@@ -239,12 +239,17 @@ EXTRAS	= -I. -c
 
 #This function only runs if the (OBJ) files exist and \
 	are updated at runtime.
-$(NAME)	: $(OBJ)
+$(NAME)	:
 		$(CC) $(CCFLAG) $(SRC)
 		ar rc $(NAME) $(OBJ) libft.h 
 		ranlib $(NAME)
 
 all		: $(NAME)
+
+linux	:
+		$(CC) $(EXTRAS) $(SRC)
+		ar rc $(NAME) $(OBJ) libft.h
+		ranlib $(NAME)
 
 clean	:
 		rm -rf $(OBJ) a.out
