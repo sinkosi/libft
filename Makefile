@@ -109,13 +109,6 @@ SRC		=	ft_memset.c		\
 		  ft_arraydup.c		\
 		  test.c			\
 		  main.c			\
-		  #FILES WITH NO NORM \
-		  FT_ITOA	\
-		  FT_STRTRIM	\
-		  FT_STRSPLIT	\
-		  FT_STRSUB	\
-		  BONUS FILES NOT ADDED OR NORM
-			
 
 OBJ		= $(SRC:.c=.o)
 #OBJ		= ft_memset.o		\
@@ -237,12 +230,17 @@ CCFLAG	= -Wall -Wextra -Werror
 #Additional Compilation flags
 EXTRAS	= -I. -c
 
+OUTPUT	= 	@echo "\nLIBFT.A has been created."\
+		  	@echo "This library is the intellectual property of"\
+			@echo "SIBONELO NKOSI (SINKOSI) & WETHINKCODE_ (NPC)"\
+
 #This function only runs if the (OBJ) files exist and \
 	are updated at runtime.
 $(NAME)	:
 		$(CC) $(CCFLAG) $(SRC)
 		ar rc $(NAME) $(OBJ) libft.h 
 		ranlib $(NAME)
+		#$(OUTPUT)
 
 all		: $(NAME)
 
@@ -250,15 +248,19 @@ linux	:
 		$(CC) $(EXTRAS) $(SRC)
 		ar rc $(NAME) $(OBJ) libft.h
 		ranlib $(NAME)
+		#$(OUTPUT)
 
 clean	:
 		rm -rf $(OBJ) a.out
+		@echo "OBJECTS CLEANED & a.out HAS BEEN DELETED"
 
 fclean	: clean
 		rm -rf $(NAME)
+		@echo "OBJECTS AND LIBFT.A HAVE BEEN CLEANED"
 
 re		:fclean all
 
+re		:fclean all
 .PHONY: clean fclean all re
 #The above function ensures that the file is made even if \
 	the files already exist in the directory.
