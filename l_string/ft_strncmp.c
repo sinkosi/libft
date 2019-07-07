@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/02 14:11:42 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/02 14:17:40 by sinkosi          ###   ########.fr       */
+/*   Created: 2019/05/20 16:15:32 by sinkosi           #+#    #+#             */
+/*   Updated: 2019/06/25 15:15:00 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "l_ctype.h"
-#include "unistd.h"
+#include "l_string.h"
 
-void ft_putchar(char c)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	write (1, &c, 1);
-}
+	size_t i;
 
-int	main(void)
-{
-	char a;
-
-	a = 'a';
-	if (ft_islower(a) == 1)
-		ft_putchar(a);
-	else
-		ft_putchar('1');
-	ft_putchar('\n');
-	return (0);
+	i = 0;
+	if (n == 0)
+		return (0);
+	while ((s1[i] != '\0' && s2[i] != '\0') && (s1[i] == s2[i] && i < n - 1))
+		i++;
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }

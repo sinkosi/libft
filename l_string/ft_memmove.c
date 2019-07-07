@@ -1,32 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/02 14:11:42 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/02 14:17:40 by sinkosi          ###   ########.fr       */
+/*   Created: 2019/06/10 12:51:43 by sinkosi           #+#    #+#             */
+/*   Updated: 2019/06/21 14:40:16 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "l_ctype.h"
-#include "unistd.h"
+#include "l_string.h"
 
-void ft_putchar(char c)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	write (1, &c, 1);
-}
+	unsigned char *s1;
+	unsigned char *s2;
 
-int	main(void)
-{
-	char a;
-
-	a = 'a';
-	if (ft_islower(a) == 1)
-		ft_putchar(a);
+	s1 = (unsigned char *)dst;
+	s2 = (unsigned char *)src;
+	if (len == 0)
+		return (s1);
+	if (s1 == '\0' && s2 == '\0')
+		return (0);
+	if (s1 > s2)
+	{
+		while (len != '\0')
+		{
+			len--;
+			s1[len] = s2[len];
+		}
+	}
 	else
-		ft_putchar('1');
-	ft_putchar('\n');
-	return (0);
+		s1 = ft_memcpy(dst, src, len);
+	return (s1);
 }

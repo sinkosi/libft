@@ -12,6 +12,7 @@
 
 #ifndef L_CTYPE_H
 # define L_CTYPE_H
+# include <string.h>
 
 /*
 ** FT_ISLOWER - Checks a char, input as an int, references the ascii table to
@@ -68,6 +69,14 @@ int				ft_isascii(int c);
 ** character sets excluding space.
 */
 int				ft_isgraph(int c);
+
+/*
+** FT_ISPUNCT - This function checks whether a character is a punctuation char.
+**		A punctuation character is a any graphic character (ft_isgraph)
+**		that is not alphanumeric (!(ft_isalnum)). The function returns
+**		(1) for true and (0) for false.
+*/
+int				ft_ispunct(int c);
 
 /*
 ** FT_ISCNTRL - This function checks whether a character is a control character

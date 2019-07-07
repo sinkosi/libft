@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/02 14:11:42 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/02 14:17:40 by sinkosi          ###   ########.fr       */
+/*   Created: 2019/06/24 08:17:42 by sinkosi           #+#    #+#             */
+/*   Updated: 2019/06/24 08:18:23 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "l_ctype.h"
-#include "unistd.h"
+#include "l_math.h"
 
-void ft_putchar(char c)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	write (1, &c, 1);
-}
+	int *temp_a;
+	int *temp_b;
 
-int	main(void)
-{
-	char a;
-
-	a = 'a';
-	if (ft_islower(a) == 1)
-		ft_putchar(a);
-	else
-		ft_putchar('1');
-	ft_putchar('\n');
-	return (0);
+	temp_a = a;
+	temp_b = b;
+	*a = *temp_a / *temp_b;
+	*b = *temp_a % *temp_b;
 }

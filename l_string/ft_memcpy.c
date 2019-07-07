@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/02 14:11:42 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/02 14:17:40 by sinkosi          ###   ########.fr       */
+/*   Created: 2019/05/30 14:53:15 by sinkosi           #+#    #+#             */
+/*   Updated: 2019/06/10 12:42:02 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "l_ctype.h"
-#include "unistd.h"
+#include "l_string.h"
 
-void ft_putchar(char c)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	write (1, &c, 1);
-}
+	char	*s1;
+	char	*s2;
+	size_t	i;
 
-int	main(void)
-{
-	char a;
-
-	a = 'a';
-	if (ft_islower(a) == 1)
-		ft_putchar(a);
-	else
-		ft_putchar('1');
-	ft_putchar('\n');
-	return (0);
+	s1 = (char *)dst;
+	s2 = (char *)src;
+	i = 0;
+	if (s1 == '\0' && s2 == '\0')
+		return (NULL);
+	if (n == 0)
+		return (s1);
+	while (i < n)
+	{
+		s1[i] = s2[i];
+		i++;
+	}
+	return (s1);
 }

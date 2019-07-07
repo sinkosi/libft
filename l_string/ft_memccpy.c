@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/02 14:11:42 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/02 14:17:40 by sinkosi          ###   ########.fr       */
+/*   Created: 2019/05/30 15:15:09 by sinkosi           #+#    #+#             */
+/*   Updated: 2019/06/10 10:45:53 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "l_ctype.h"
-#include "unistd.h"
+#include "l_string.h"
 
-void ft_putchar(char c)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	write (1, &c, 1);
-}
+	char			*str1;
+	char			*str2;
+	size_t			i;
 
-int	main(void)
-{
-	char a;
-
-	a = 'a';
-	if (ft_islower(a) == 1)
-		ft_putchar(a);
-	else
-		ft_putchar('1');
-	ft_putchar('\n');
-	return (0);
+	i = 0;
+	str1 = (char *)dst;
+	str2 = (char *)src;
+	if (i > n)
+		return (0);
+	while (i < n)
+	{
+		str1[i] = str2[i];
+		if ((unsigned char)str1[i] == (unsigned char)c)
+			return ((char *)str1 + i + 1);
+		i++;
+	}
+	return (NULL);
 }

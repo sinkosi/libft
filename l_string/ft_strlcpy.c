@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/02 14:11:42 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/02 14:17:40 by sinkosi          ###   ########.fr       */
+/*   Created: 2019/06/24 07:44:54 by sinkosi           #+#    #+#             */
+/*   Updated: 2019/06/24 11:26:07 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "l_ctype.h"
-#include "unistd.h"
+#include "l_string.h"
 
-void ft_putchar(char c)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	write (1, &c, 1);
-}
+	size_t	i;
+	size_t	j;
 
-int	main(void)
-{
-	char a;
-
-	a = 'a';
-	if (ft_islower(a) == 1)
-		ft_putchar(a);
-	else
-		ft_putchar('1');
-	ft_putchar('\n');
-	return (0);
+	if (src == NULL)
+		return (0);
+	i = ft_strlen(src);
+	j = 0;
+	if (i == 0 || dstsize == 0)
+	{
+		dst[0] = '\0';
+		return (i);
+	}
+	while (j < (dstsize - 1) && src[j] != '\0')
+	{
+		dst[j] = src[j];
+		j++;
+	}
+	dst[j] = '\0';
+	if (dstsize < i)
+		return (ft_strlen(src));
+	return (j);
 }

@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/02 14:11:42 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/02 14:17:40 by sinkosi          ###   ########.fr       */
+/*   Created: 2019/06/12 14:19:23 by sinkosi           #+#    #+#             */
+/*   Updated: 2019/06/12 14:19:49 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "l_ctype.h"
-#include "unistd.h"
+#include "l_string.h"
 
-void ft_putchar(char c)
+char	*ft_strreverse(char *s)
 {
-	write (1, &c, 1);
-}
+	size_t	i;
+	size_t	j;
+	char	*a;
 
-int	main(void)
-{
-	char a;
-
-	a = 'a';
-	if (ft_islower(a) == 1)
-		ft_putchar(a);
-	else
-		ft_putchar('1');
-	ft_putchar('\n');
-	return (0);
+	i = ft_strlen(s);
+	a = ft_strnew(i + 1);
+	j = 0;
+	while (j < ft_strlen(s))
+	{
+		a[j] = s[i - 1];
+		j++;
+		i--;
+	}
+	a[j] = '\0';
+	return (a);
 }

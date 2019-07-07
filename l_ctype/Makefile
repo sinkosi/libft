@@ -7,7 +7,6 @@
 #########################################################
 
 NAME	= l_ctype.a
-NAME2	= l_ctype.so
 
 SRC	=	ft_islower.c	\
 		ft_isupper.c	\
@@ -18,6 +17,7 @@ SRC	=	ft_islower.c	\
 		ft_isspace.c	\
 		ft_isascii.c	\
 		ft_isgraph.c	\
+		ft_ispunct.c	\
 		ft_iscntrl.c	\
 		ft_isprint.c	\
 		ft_isxdigit.c	\
@@ -37,32 +37,48 @@ SRC	=	ft_islower.c	\
 
 OBJ	=	$(SRC:%.c=%.o)
 
+#COLOURS
+NOC		= \033[0m
+BOLD		= \033[1m
+UNDERLINE	= \033[4m
+	#BLACK		= \033[1;31m
+RED		= \033[1;31m
+GREEN		= \033[1;32m
+YELLOW		= \033[1;33m
+BLUE		= \033[1;34m
+MAGENTA		= \033[1,35m
+	#VIOLET		= \033[1;36m
+CYAN		= \033[1;36m
+WHITE		= \033[1;0m
+
 CC	=	gcc
 CCFLAGS	=	-Wall -Werror -Wextra
-EXTRAS	=	-I -c
+EXTRAS	=	-c
+
+OUTPUT	= 	@echo	"$(GREEN)$(NAME) has been created."\
+			"$(BLUE)\nThis library is the intellectual property of"\
+			"$(CYAN)\nSIBONELO NKOSI (SINKOSI) & WETHINKCODE_ (NPC)$(WHITE)"\
 
 $(NAME)	:
-		$(CC) $(CCFLAGS) $(SRC)
+		$(CC) $(EXTRAS) $(CCFLAGS) $(SRC)
 		ar rc $(NAME) $(OBJ) l_ctype.h
 		ranlib $(NAME)
-		@echo "LIBRARY L_CTYPE.A HAS BEEN CREATED"
+		$(OUTPUT)
 
-$(NAME2):
-		$(CC) $(CCFLAGS) $(SRC)
-		ar rc $(NAME2) $(OBJ) l_ctype.h
-		ranlib $(NAME2)
-		@echo "LIBRARY L_CTYPE.A HAS BEEN CREATED"
+linux	:	
+		clang $(EXTRAS) $(CCFLAGS) $(SRC)
+		ar rc $(NAME) $(OBJ) l_ctype.h
+		ranlib $(NAME)
+		$(OUTPUT)
 
 all	:	$(NAME)
 
-linux	:	$(NAME2)
-
 clean	:
 		rm -rf $(OBJ) a.out
-	
-fclean	:
-		clean
-		rm -rf $(NAME)
+		@echo "$(YELLOW)OBJECTS CLEANED & a.out HAS BEEN DELETED$(WHITE)"
 
-re	:
-		fclean all
+fclean	: clean
+		rm -rf $(NAME) $(NAME2)
+		@echo "$(RED)OBJECTS AND LIBFT.A HAVE BEEN CLEANED$(WHITE)"
+
+re	: fclean all

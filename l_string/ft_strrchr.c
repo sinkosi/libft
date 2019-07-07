@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/02 14:11:42 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/02 14:17:40 by sinkosi          ###   ########.fr       */
+/*   Created: 2019/05/24 11:42:49 by sinkosi           #+#    #+#             */
+/*   Updated: 2019/06/25 16:30:20 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "l_ctype.h"
-#include "unistd.h"
+#include "l_string.h"
 
-void ft_putchar(char c)
+char	*ft_strrchr(const char *s, int c)
 {
-	write (1, &c, 1);
-}
+	char	*result;
+	size_t	i;
 
-int	main(void)
-{
-	char a;
-
-	a = 'a';
-	if (ft_islower(a) == 1)
-		ft_putchar(a);
-	else
-		ft_putchar('1');
-	ft_putchar('\n');
-	return (0);
+	result = NULL;
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == (char)c)
+			result = ((char *)s + i);
+		i++;
+	}
+	if (s[i] == '\0' && c == '\0')
+		return ((char *)s + i);
+	return (result);
 }

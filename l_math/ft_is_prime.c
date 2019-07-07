@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/02 14:11:42 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/02 14:17:40 by sinkosi          ###   ########.fr       */
+/*   Created: 2019/06/24 07:54:50 by sinkosi           #+#    #+#             */
+/*   Updated: 2019/06/24 13:41:02 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "l_ctype.h"
-#include "unistd.h"
+#include "l_math.h"
 
-void ft_putchar(char c)
+int	ft_is_prime(unsigned int nb)
 {
-	write (1, &c, 1);
-}
+	unsigned int i;
 
-int	main(void)
-{
-	char a;
-
-	a = 'a';
-	if (ft_islower(a) == 1)
-		ft_putchar(a);
-	else
-		ft_putchar('1');
-	ft_putchar('\n');
-	return (0);
+	if (nb <= 1)
+		return (0);
+	else if ((nb == 2) || (nb == 3) || (nb == 5))
+		return (1);
+	else if ((nb != 2) && (nb % 2 == 0))
+		i = (0);
+	else if ((nb % 3 == 0) || (nb % 5 == 0))
+		return (0);
+	i = 3;
+	while (i < (nb / 2) + 1)
+	{
+		if (nb % i == 0)
+			return (0);
+		i++;
+	}
+	return (1);
 }
