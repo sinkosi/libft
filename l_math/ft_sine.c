@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sine.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/07/09 15:24:51 by sinkosi           #+#    #+#             */
+/*   Updated: 2019/07/09 15:25:20 by sinkosi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "l_math.h"
 
 double	ft_sine(int deg)
 {
 	double	rad;
 	double	sin;
-	int	i;
+	int		i;
 
 	deg %= 360;
 	rad = deg * M_PI / 180;
@@ -12,7 +24,7 @@ double	ft_sine(int deg)
 	i = 0;
 	while (i < 7)
 	{
-		sin += ft_power(-1, i) * ft_power(rad, 2 * i + 1) 
+		sin += ft_power(-1, i) * ft_power(rad, 2 * i + 1)
 			/ ft_factorial(2 * i + 1);
 		i++;
 	}

@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/25 12:24:38 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/07/09 16:04:45 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ typedef struct	s_list
 */
 int				ft_atoi(const char *nptr);
 
-
 /*
 ** ************************************************************************ *
 **                                                                          *
@@ -37,7 +36,6 @@ int				ft_atoi(const char *nptr);
 **                                                                          *
 ** ************************************************************************ *
 */
-
 
 /*
 ** FT_STRITER - This function applies the function f to each character
@@ -296,7 +294,6 @@ char			*ft_strupcase(char *str);
 **		the string after modifications.
 */
 char			*ft_strcapitalize(char *str);
-
 
 /*
 ** FT_NUMLEN_BASE - This function takes an int n as an argument and returns

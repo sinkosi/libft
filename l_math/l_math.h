@@ -1,4 +1,14 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   l_math.h                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/07/09 14:54:28 by sinkosi           #+#    #+#             */
+/*   Updated: 2019/07/09 15:49:31 by sinkosi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef L_MATH_H
 # define L_MATH_H
@@ -13,14 +23,13 @@
 **	macros. The purpose of these is for graphics rendering, algorithm opti-
 **	mization, binary tree traversals and (but not limited to) sorting.
 **
-*/
-
-/* ***************************************************************************/
-/*	MACROS								*/
-/*									*/
-/* ***************************************************************************/
-
-/*
+**
+** ************************************************************************ *
+**																			*
+**									MACROS									*
+**																			*
+** ************************************************************************ *
+**
 ** The Natural number e
 */
 # define M_E 2.78182818284590452354
@@ -48,14 +57,50 @@
 # define M_SQRT2 1.41421356237309504880
 # define M_SQRT1_2 0.70710678118654752440
 
-/* ****************************************************************************/
+/*
+** ************************************************************************ *
+**																			*
+**									VECTORS									*
+**																			*
+** ************************************************************************ *
+*/
 
-struct vector
+typedef	struct	s_vector
 {
 	double x;
 	double y;
 	double z;
-};
+}				t_vector;
+/*
+** vector_add - A function to perform basic addition of two vectors in the form
+**		of (v1 + v2)
+*/
+t_vector		vector_add(t_vector v1, t_vector v2);
+
+/*
+** vector_subtract - A function to perform basic subtraction between two vectors
+**		in the form of (v1 - v2)
+*/
+t_vector		vector_subtract(t_vector v1, t_vector v2);
+
+/*
+** vector_multiply - A basic function to perform basic multiplication between
+**		a vector v1 and a value of type double. This is not the cross product.
+**		This function returns a vector of (x*value),(y*value) & (z*value).
+*/
+void			vector_multiply(t_vector v1, double multiple);
+
+/*
+** vector_divide - This is a basic function to divide vector v1 by a value of
+**		type double. It returns x/value, y/value & z/value.
+*/
+void			vector_divide(t_vector v1, double divisor);
+
+/*
+** vector_magnitude - This is a basic function to obtain the magnitude of a
+**		vector, returning a value of type double.
+*/
+double			vector_magnitude(t_vector v1);
 
 /*
 ** ************************************************************************** *
@@ -148,11 +193,11 @@ double			ft_fabs(double x);
 /*
 ** FT_SIN
 */
-double ft_sine(int deg);
+double			ft_sine(int deg);
 
 /*
 ** FT_COSINE
 */
-double ft_cosine(int deg);
+double			ft_cosine(int deg);
 
 #endif

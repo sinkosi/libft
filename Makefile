@@ -68,6 +68,7 @@ SRC		=			  ft_atoi.c			\
 		  ft_atoi_base.c	\
 		  ft_arraydup.c		\
 		  test.c			\
+		  ft_atoi_base.c	\
 		  #main.c			\
 
 OBJ		= $(SRC:.c=.o) 

@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/24 07:57:57 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/25 15:33:48 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/07/09 16:30:27 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int	ft_atoi_base(const char *str, int base)
 	int	sign;
 
 	i = 0;
-	n = 0;
 	sign = 1;
 	if (base < 2 || base > 16 || str == NULL)
 		return (0);
@@ -38,10 +37,12 @@ int	ft_atoi_base(const char *str, int base)
 		else
 			n = (n * 10) + (str[i] - '0');
 		i++;
-		if ((n < -2147483648) && sign == -1)
-			return (0);
-		else if ((n > 2147483647) && sign == 1)
-			return (-1);
 	}
 	return (n * sign);
 }
+/*
+** if ((n < -2147483648) && sign == -1)
+**			return (0);
+**		else if ((n > 2147483647) && sign == 1)
+**			return (-1);
+*/

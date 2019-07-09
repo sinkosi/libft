@@ -1,42 +1,52 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_vector.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/07/09 15:34:13 by sinkosi           #+#    #+#             */
+/*   Updated: 2019/07/09 15:52:20 by sinkosi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "l_math.h"
 
-struct	vector Vector_add(struct vector v1, struct vector v2)
+t_vector	vector_add(t_vector v1, t_vector v2)
 {
-	struct vector sum;
+	t_vector sum;
+
 	sum.x = v1.x + v2.x;
 	sum.y = v1.y + v2.y;
 	sum.z = v1.z + v2.y;
 	return (sum);
 }
 
-struct	vector Vector_subtract(struct vector v1, struct vector v2)
+t_vector	vector_subtract(t_vector v1, t_vector v2)
 {
-	struct vector sum;
+	t_vector sum;
+
 	sum.x = v1.x - v2.x;
 	sum.y = v1.y - v2.y;
 	sum.z = v1.z - v2.z;
 	return (sum);
 }
 
-struct	vector Vector_multiply(struct vector v1, double multiple)
+void		vector_multiply(t_vector v1, double multiple)
 {
-	struct vector sum;
-	sum.x = multiple * v1.x;
-	sum.y = multiple * v1.y;
-	sum.z = multiple * v1.z;
-	return (sum);
+	v1.x = multiple * v1.x;
+	v1.y = multiple * v1.y;
+	v1.z = multiple * v1.z;
 }
 
-struct	vector Vector_divide(struct vector v1, double divisor)
+void		vector_divide(t_vector v1, double divisor)
 {
-	struct vector sum;
-	sum.x = v1.x / divisor;
-	sum.y = v1.y / divisor;
-	sum.z = v1.z / divisor;
-	return (sum);
+	v1.x = (v1.x / divisor);
+	v1.y = (v1.y / divisor);
+	v1.z = (v1.z / divisor);
 }
 
-double	Vector_magnitude(struct vector v1)
+double		vector_magnitude(t_vector v1)
 {
 	double	magnitude;
 

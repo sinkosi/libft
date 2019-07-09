@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 16:56:08 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/14 14:37:45 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/07/09 16:12:12 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ void	test_02(char a)
 	if (ft_isalpha(a))
 	{
 		ft_putchar(a);
-		ft_putstr(" is the char, you have entered. It is a letter of the alphabet.\n");
+		ft_putstr(" is the char, you have entered.");
+		ft_putstr("It is a letter of the alphabet.\n");
 	}
 	if (ft_isdigit(a))
 	{
