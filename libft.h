@@ -16,14 +16,21 @@
 # include <unistd.h>
 # include <stdlib.h>
 
+#define BUFF_SIZE 32
+
 /*
-** l_math is a Math Library created by Sibonelo Nkosi to conduct some in-depth
-**	and challenging Math calculations. The functions contained herein, will
-**	be recreations of the standard 'math.h' library contained within C.
+** libft is a School Library created by Sibonelo Nkosi to conduct some in-depth
+**	and challenging Math & Computational calculations and operations. 
+**	The functions contained herein, will be recreations of the standard
+**	C-library, 'ctype.h', 'string.h' & 'math.h' library contained within C.
 **
 ** There will be additional functions contained therein, including structs and
 **	macros. The purpose of these is for graphics rendering, algorithm opti-
 **	mization, binary tree traversals and (but not limited to) sorting.
+** Included in all this are the standard functions of reading user input, store
+**	the input and to manipulate the input. Thus other string handling and
+**	manipulation and verification functions exist within.
+** Lexing & Parsing will be handled by a main, that will call functions within.
 **
 **
 ** ************************************************************************ *
@@ -106,10 +113,11 @@ void			vector_divide(t_vector v1, double divisor);
 double			vector_magnitude(t_vector v1);
 
 /*
-*******************************************************************************
-*
-* 			LISTS
-*
+** **************************************************************************** *
+**										*
+** 			LISTS							*
+**										*
+** ****************************************************************************	*
 */
 
 
@@ -122,13 +130,13 @@ typedef struct	s_list
 
 
 /*
-***************************************************************************
-
-	CYTPE.H
-
-	THIS IS THE CTYPE LIB
-
-***************************************************
+** ****************************************************************************	*
+**										*
+**				CYTPE.H						*
+**										*
+**			THIS IS THE CTYPE LIB					*
+**										*
+** ****************************************************************************	*
 */
 
 /*
@@ -315,16 +323,11 @@ int				ft_str_is_alnum(char *str);
 int				ft_str_is_printable(char *str);
 
 /*
- * *********************************************************
- * *********************************************************
- * *********************************************************
- */
-
-/*
- * ****************
- * *
- * STRING.H
- *
+** ****************************************************************************	*
+**										*
+** 					STRING.H				*
+**										*
+** ****************************************************************************	*
 */
 
 /*
@@ -595,13 +598,13 @@ char			*ft_strtok(char *str, const char *delim);
 */
 
 /*
- * **************************************************
- * LIBC
- *
- *
- *
- *
- * **********************
+** ****************************************************************************	*
+** 										*
+**										*
+**					LIBC					*
+**										*
+**										*
+** ****************************************************************************	*
  */
 
 /*
@@ -829,11 +832,20 @@ int				ft_atoi_base(const char *str, int base);
 char			**ft_arraydup(const char **arr);
 
 /*
-** ************************************************************************** *
-**                                                                            *
-**								  BONUS PART								  *
-**                                                                            *
-** ************************************************************************** *
+**	get_next_line - This function takes input from given/chosen file descriptor
+**		It takes two parameters as an argument. The first is the file descriptor
+**		that will be read, the second is the address of a pointer to a character
+**		that will be used to save the line read from the file descriptor. When
+**		the reading is complete the function returns its result without '\n'.
+*/
+int				get_next_line(const int fd, char **line);
+
+/*
+** ****************************************************************************	 *
+**                                                                           	 *
+**					MORE LISTS				 *
+**										 *
+** ***************************************************************************** *
 */
 
 /*
@@ -920,12 +932,13 @@ void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 /*
- * ***********************************************************
- * 			MATH.H
- *
- *
- * 			******************************
- */
+** ****************************************************************************	*
+**										*
+** 				MATH.H						*
+**										*
+**										*
+*******************************************************************************	*
+*/
 
 /*
 ** ************************************************************************** *

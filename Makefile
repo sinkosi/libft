@@ -112,6 +112,7 @@ SRC		=	ft_atoi.c			\
 		  ft_putnbr_base.c	\
 		  ft_atoi_base.c	\
 		  ft_arraydup.c		\
+		  get_next_line.c	\
 		  test.c			\
 		  ft_atoi_base.c	\
 		  #main.c			\
