@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.h                                             :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 16:47:39 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/05 10:39:02 by sinkosi          ###   ########.fr       */
+/*   Created: 2019/06/24 08:17:42 by sinkosi           #+#    #+#             */
+/*   Updated: 2019/06/24 08:18:23 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TEST_H
-# define TEST_H
-# include "libft.h"
+#include "libft.h"
 
-/*
-** This is a libft.h test file.
-** I plan to run through each file one by one and thest every single function
-** that I come accross. Some functions will have to be overwritten in order
-** to make my life easier.
-*/
-/*
-** int	ft_islower(int c);
-**int	ft_isupper(int c);
-*/
-void	test_01(char(a));
-void	test_02(char(a));
+void	ft_ultimate_div_mod(int *a, int *b)
+{
+	int *temp_a;
+	int *temp_b;
 
-#endif
+	temp_a = a;
+	temp_b = b;
+	*a = *temp_a / *temp_b;
+	*b = *temp_a % *temp_b;
+}

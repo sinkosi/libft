@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.h                                             :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 16:47:39 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/05 10:39:02 by sinkosi          ###   ########.fr       */
+/*   Created: 2019/06/24 13:43:21 by sinkosi           #+#    #+#             */
+/*   Updated: 2019/06/24 13:43:36 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TEST_H
-# define TEST_H
-# include "libft.h"
+#include "libft.h"
 
-/*
-** This is a libft.h test file.
-** I plan to run through each file one by one and thest every single function
-** that I come accross. Some functions will have to be overwritten in order
-** to make my life easier.
-*/
-/*
-** int	ft_islower(int c);
-**int	ft_isupper(int c);
-*/
-void	test_01(char(a));
-void	test_02(char(a));
+int	ft_find_next_prime(int nb)
+{
+	int pos;
 
-#endif
+	pos = 0;
+	if (nb <= 1)
+		return (0);
+	while (pos == 0)
+	{
+		pos = ft_is_prime(nb);
+		nb++;
+	}
+	return (nb);
+}

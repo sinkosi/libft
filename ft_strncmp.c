@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.h                                             :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 16:47:39 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/05 10:39:02 by sinkosi          ###   ########.fr       */
+/*   Created: 2019/05/20 16:15:32 by sinkosi           #+#    #+#             */
+/*   Updated: 2019/06/25 15:15:00 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TEST_H
-# define TEST_H
-# include "libft.h"
+#include "libft.h"
 
-/*
-** This is a libft.h test file.
-** I plan to run through each file one by one and thest every single function
-** that I come accross. Some functions will have to be overwritten in order
-** to make my life easier.
-*/
-/*
-** int	ft_islower(int c);
-**int	ft_isupper(int c);
-*/
-void	test_01(char(a));
-void	test_02(char(a));
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	size_t i;
 
-#endif
+	i = 0;
+	if (n == 0)
+		return (0);
+	while ((s1[i] != '\0' && s2[i] != '\0') && (s1[i] == s2[i] && i < n - 1))
+		i++;
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+}

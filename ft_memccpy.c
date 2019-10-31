@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.h                                             :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 16:47:39 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/05 10:39:02 by sinkosi          ###   ########.fr       */
+/*   Created: 2019/05/30 15:15:09 by sinkosi           #+#    #+#             */
+/*   Updated: 2019/06/10 10:45:53 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TEST_H
-# define TEST_H
-# include "libft.h"
+#include "libft.h"
 
-/*
-** This is a libft.h test file.
-** I plan to run through each file one by one and thest every single function
-** that I come accross. Some functions will have to be overwritten in order
-** to make my life easier.
-*/
-/*
-** int	ft_islower(int c);
-**int	ft_isupper(int c);
-*/
-void	test_01(char(a));
-void	test_02(char(a));
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+{
+	char			*str1;
+	char			*str2;
+	size_t			i;
 
-#endif
+	i = 0;
+	str1 = (char *)dst;
+	str2 = (char *)src;
+	if (i > n)
+		return (0);
+	while (i < n)
+	{
+		str1[i] = str2[i];
+		if ((unsigned char)str1[i] == (unsigned char)c)
+			return ((char *)str1 + i + 1);
+		i++;
+	}
+	return (NULL);
+}

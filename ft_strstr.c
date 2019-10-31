@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.h                                             :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 16:47:39 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/05 10:39:02 by sinkosi          ###   ########.fr       */
+/*   Created: 2019/05/27 15:17:40 by sinkosi           #+#    #+#             */
+/*   Updated: 2019/05/28 12:54:47 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TEST_H
-# define TEST_H
-# include "libft.h"
+#include "libft.h"
 
-/*
-** This is a libft.h test file.
-** I plan to run through each file one by one and thest every single function
-** that I come accross. Some functions will have to be overwritten in order
-** to make my life easier.
-*/
-/*
-** int	ft_islower(int c);
-**int	ft_isupper(int c);
-*/
-void	test_01(char(a));
-void	test_02(char(a));
+char	*ft_strstr(const char *haystack, const char *needle)
+{
+	size_t i;
+	size_t j;
 
-#endif
+	i = 0;
+	if (ft_strlen(needle) == 0)
+		return ((char *)haystack);
+	while (haystack[i] != '\0')
+	{
+		j = 0;
+		while (needle[j] == haystack[i + j])
+		{
+			if (needle[j + 1] == '\0')
+			{
+				return ((char *)haystack + i);
+			}
+			j++;
+		}
+		i++;
+	}
+	return (NULL);
+}
