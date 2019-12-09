@@ -19,3 +19,5 @@ Create any C file you wish and call the function you desire using ft_ prefix to 
 function you would call in C. There are additional functions that exist which are not included
 in the standard C Library. To find these functions and there uses. Check 'libft.h', this will
 operate similar to the man.
+
+# FINAL MARK - 124/100
