@@ -553,8 +553,8 @@ char			*ft_strncat(char *dst, const char *src, size_t n);
 
 /*
 ** FT_STRLCAT - This function will append string src to string dst if the
-**		BUFFER can guarantee NUL-termination and there is room to do. Room for
-**		NUL should be included in dstsize.
+**		BUFFER can guarantee NUL-termination and there is room to do so. Room
+**		for NULL should be included in dstsize.
 */
 size_t			ft_strlcat(char *dst, const char *src, size_t dstsize);
 
@@ -568,7 +568,7 @@ char			*ft_strchr(const char *s, int c);
 /*
 ** FT_STRRCHR - This function locates the last occurence of c in the string
 **		pointed to by s. The function returns a pointer to the located charac-
-**		ter. It can also fins the '\0' character.
+**		ter. It can also finds the '\0' character.
 */
 char			*ft_strrchr(const char *s, int c);
 
@@ -580,7 +580,7 @@ char			*ft_strrchr(const char *s, int c);
 long			ft_strlchr(const char *s, int c);
 
 /*
-** FT_STRCHR_BOOL - This function locates the occurence of c int the string
+** FT_STRCHR_BOOL - This function locates the occurence of c in the string
 **		pointed to by s. The function returns a '1' if the char c is found
 **		and 0 if it is not found.
 */
@@ -590,7 +590,7 @@ int				ft_strchr_bool(const char *s, int c);
 ** FT_STRSTR - This function locates the first occurrence of the null-
 **		terminated string 'needle' in the null terminated string 'haystack'
 **		If needle is empty, haystack is returned. If no needle is found then
-**		NULL us returned. If found a pointer to first occurrence is returned.
+**		NULL is returned. If found a pointer to first occurrence is returned.
 */
 char			*ft_strstr(const char *haystack, const char *needle);
 
@@ -657,13 +657,13 @@ char			*ft_strnew(size_t size);
 
 /*
 ** FT_STRDEL - This function takes as a parameter the address of a
-**		strinf that needs to be freed with free, then sets the pointer
+**		string that needs to be freed with free, then sets the pointer
 **		to NULL.
 */
 void			ft_strdel(char **as);
 
 /*
-** FT_STRCCLR - This function takes a string as input and sets every
+** FT_STRCLR - This function takes a string as input and sets every
 **		character of the string to the value '\0'
 */
 void			ft_strclr(char *s);
@@ -691,7 +691,7 @@ int				ft_strequ(char const *s1, char const *s2);
 
 /*
 ** FT_STRNEQU - This function performs a lexicographical comparison
-**		betwenn s1 and s2 up to 'n characters' or until a '\0' is
+**		between s1 and s2 up to 'n characters' or until a '\0' is
 **		reached. If the 2 strings are identical, the function returns
 **		1, or 0 otherwise.
 */
@@ -831,7 +831,7 @@ size_t			ft_numlen(intmax_t n);
 /*
 ** FT_ITOA - This function will allocate and return a fresh string ending
 **		with '\0'. The function returns a string equivalent of the parameter
-**		' n', given as argument. It supports negative numbers. If allocation
+**		'n', given as argument. It supports negative numbers. If allocation
 **		fails, it returns NULL.
 */
 char			*ft_itoa(int n);
