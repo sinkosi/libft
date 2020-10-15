@@ -21,9 +21,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	i = (ft_strlen(s1) + ft_strlen(s2));
 	str = ft_strnew(i);
-	if (s1 == '\0')
+	if (s1[0] == '\0')
 		return ((char *)s2);
-	else if (s2 == '\0')
+	else if (s2[0] == '\0')
 		return ((char *)s1);
 	if (str == NULL)
 		return (NULL);

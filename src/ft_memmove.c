@@ -21,7 +21,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	s2 = (unsigned char *)src;
 	if (len == 0)
 		return (s1);
-	if (s1 == '\0' && s2 == '\0')
+	if (s1[0] == '\0' && s2[0] == '\0')
 		return (0);
 	if (s1 > s2)
 	{

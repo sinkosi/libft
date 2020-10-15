@@ -1,7 +1,7 @@
 # libft <!-- omit in toc -->
 
 - [Objectives](#objectives)
-- [How To Use LIBFT](#how-to-use-libft)
+- [How To Use 'libft'](#how-to-use-libft)
 - [FINAL MARK - 124/100](#final-mark---124100)
 
 Libft Project - Rewrite some of the standard c libraries
@@ -15,7 +15,7 @@ projects.
 Through this project, we also give you the opportunity to expand the list of functions
 with your own. Take the time to expand your libft throughout the year.
 
-## How To Use LIBFT
+## How To Use 'libft'
 
 After cloning the repository, run the Makefile.
 
