@@ -2,7 +2,7 @@
 
 - [Objectives](#objectives)
 - [How To Use 'libft'](#how-to-use-libft)
-- [FINAL MARK - 124/100](#final-mark---124100)
+- [FINAL MARK - 124/100 👍](#final-mark---124100-)
 
 Libft Project - Rewrite some of the standard c libraries
 
@@ -26,4 +26,4 @@ function you would call in C. There are additional functions that exist which ar
 in the standard C Library. To find these functions and there uses. Check 'libft.h', this will
 operate similar to the man.
 
-## FINAL MARK - 124/100
+## FINAL MARK - 124/100 👍
