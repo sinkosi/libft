@@ -30,4 +30,6 @@ operate similar to the man.
 
 When compiling a file include libft.a into your compile statement e.g `gcc -Wall -Werror -Wextra main.c libft.a`
 
+This library is fast and very comprehensive.
+
 ## FINAL MARK - 124/100 👍
